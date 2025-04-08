@@ -1,0 +1,120 @@
+/* này là file reset css, và các thuộc tính dùng chung, ko được sửa, nhớ import vào các pages của mình */
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  border-style: none;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+/* reset css */
+/* css chung */
+:root {
+  --max-width-container: 80%;
+  --primary-color: #0A1C2F;
+  --background-color: #020D18;
+  --background-color-smaller: #08294A;
+  --red-color: #DD003F;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.container {
+  width: var(--max-width-container);
+  margin: auto;
+  background-color: var(--background-color);
+  height: 8000px;
+  padding: 20px;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10000px;
+  padding: 30px 20px;
+  position: fixed;
+  width: calc(var(--max-width-container) - 20px * 2);
+}
+
+header>* {
+  text-transform: uppercase;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header ul li a {
+  color: var(--primary-color);
+  transition: .25s ease;
+  font-weight: 500;
+  padding: 10px 20px;
+}
+
+header ul li a:hover {
+  color: var(--red-color);
+}
+
+.active-link {
+  font-weight: bold;
+  color: var(--red-color);
+}
+
+.rounded-red-btn {
+  background-color: var(--red-color);
+  padding: 10px 30px;
+  color: white;
+  border-radius: 10000px;
+}
+
+.rounded-red-btn:hover {
+  color: white;
+  opacity: .8;
+}
+
+.header-nav-sub {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.header-nav-sub:nth-child(1) {
+  justify-content: left;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: var(--background-color-smaller);
+  color: white;
+  padding: 20px;
+}
+
+/* css chung */
