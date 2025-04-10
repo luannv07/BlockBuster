@@ -1,0 +1,6 @@
+git checkout duy : chuyển sang nhánh duy
+git checkout main : chuyển sang nhánh main
+* Sau khi code xong:
+git add . :chuyển vào mục sẵn sàng push lên branch duy
+git commit -m "tên commit" :chuyển các file ở trong mục sẵn sàng để push lên repository trên GitHub( tại nhánh branch duy)
+git push : chính thức đưa thư mục đã chỉnh sửa vào repository trên GitHub( tại nhánh branch duy)
