@@ -4,3 +4,14 @@ git checkout main : chuyển sang nhánh main
 git add . :chuyển vào mục sẵn sàng push lên branch duy
 git commit -m "tên commit" :chuyển các file ở trong mục sẵn sàng để push lên repository trên GitHub( tại nhánh branch duy)
 git push : chính thức đưa thư mục đã chỉnh sửa vào repository trên GitHub( tại nhánh branch duy)
+
+/* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
+header {
+
+    width: calc(var(--max-width-container) - 40px);
+    /*căn giữa menu*/
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
