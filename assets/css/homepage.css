@@ -70,7 +70,7 @@ header ul {
     /*chữ nổi dần dần khi được di chuột vào*/
         .login_side:hover{
             font-weight: bolder;
-            transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
+            transition: font-weight 0.3s ease-in-out;
         }
 .noi_dung_banner{
     margin-top: 12%;

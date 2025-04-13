@@ -51,7 +51,7 @@ header ul {
 /*chữ nổi dần dần khi được di chuột vào*/
     .login_side:hover{
         font-weight: bolder;
-        transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
+        transition: font-weight 0.3s ease-in-out;
     }
 /* đặt wrapper trang được bao phủ toàn bộ*/
 .wrapper {
@@ -60,13 +60,11 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1E1E2F;
 }
 
 /*background hình lửa trại bên trong header*/
 
     .main-wrapper {
-        background-color: #1E1E2F;
         background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
         url('images/banner/banner\ 1.png');
         background-position:center;
@@ -119,13 +117,6 @@ header ul {
         cursor: pointer;
     }
     /*xây dựng phần thân*/
-    main{
-        width: 100%;
-        height: 1354px;
-        background: #020D18;
-        margin-top: 2%;
-
-    }
     /*tạo 1 khu vực chính dành cho thân*/
     .main_blog{
         margin: auto;
@@ -137,6 +128,7 @@ header ul {
     }
     /*khu vực chính bên trong khu vực chính của thân chiếm 70% */
     .main_content{
+        margin-top: 50px;
         flex: 70%;
     }
     /*khu vực chính 70% chia làm 3 hàng- 4 cột*/
@@ -230,13 +222,16 @@ header ul {
         overflow: hidden;
         text-overflow: ellipsis; 
         white-space: normal; /* Cho phép xuống dòng */
-        margin: 2px;
+        margin: 5px;
+        margin-left: 7px;
+        width: 90%;
     }
     .cot1_content1:hover,.cot1_content3:hover{
         text-decoration: underline #3F7DB2 2px;
 
     }
     .cot1_content1{
+        padding-left: 5px;
         font-size: 16px;
         font-weight: bold;
         /*color: #3F7DB2;*/
@@ -247,7 +242,8 @@ header ul {
         color:#FFE836;
     }
     .cot1_content2{
-        margin: 2px;
+        margin: 5px;
+        margin-left: 7px;
         margin-top: 10px;
         color: #FFFFFF99;
         font-size: 12px;
@@ -261,7 +257,7 @@ header ul {
         flex: 30%;
         height: 600px;
         margin-right: 1cm;
-        margin-top: 20px;
+        margin-top: 60px;
     }
     /* khu vực phụ 30% chia làm 3 hàng, chia đều cho cân bằng với cột chính 70%*/
     .thanh4,.thanh5,.thanh6{
@@ -357,6 +353,7 @@ header ul {
         height: 35px;
         margin: auto;
         margin-right: 49%;
+        margin-top: 2%;
         display: flex;
         justify-content:space-around;
         align-items: center;
@@ -429,10 +426,13 @@ header ul {
         cursor: pointer;
     }
     footer{
+        margin-top: 54.8%;
+        z-index: 1000;
+        position: relative;}
+    .container{
         width: 100%;
-        margin-top: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #1e7bd8;
+        max-width: var(--max-width-container);
+        height: 200%;
+        margin: auto;
+        padding: 20px;
     }
