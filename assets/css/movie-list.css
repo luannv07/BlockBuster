@@ -1,5 +1,6 @@
 .container {
   background-color: transparent;
+  height: auto;
 }
 
 body {
@@ -213,4 +214,39 @@ img {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.pagination {
+  padding: 20px 0 0 0;
+}
+
+.pagination * {
+  color: #ccc;
+}
+
+.pagination ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination ul li a {
+  border: 2px solid #ccc;
+  display: block;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination ul li a:hover {
+  opacity: .8;
+}
+
+.active-pagination-link {
+  border-color: #FFE836 !important;
+  color: #FFE836 !important;
 }
