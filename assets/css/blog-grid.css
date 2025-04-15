@@ -3,18 +3,11 @@ div{
     font-family: 'Segoe UI';
     transition: all 0.3s ease-in-out;
 }
-:root{
-    --max-width-container: 100%;
-    --max-width-content: 100%;
-    --max-width-header: 100%;
-    --max-width-footer: 100%;
-    --max-width-main: 100%;
-    --max-width-sidebar: 100%;
-    --max-width-banner: 100%;
-    --max-width-blog: 100%;
-    --max-width-tag: 100%;
-    --max-width-category: 100%;
-    --max-width-search: 100%;
+body{
+    background-color: var(--background-color);
+    color: #FFFFFF;
+    font-family: 'Segoe UI';
+    transition: all 0.3s ease-in-out;
 }
 
 /*header, màu background được thu nhỏ theo chiều dài*/
@@ -70,11 +63,11 @@ header ul {
         background-position:center;
         background-size: cover;
         padding: 30px; 
-        width: 102%;
-        margin: -1%;
+        width: 100%;
+        height: 450px;
     }
     /* thẻ banner*/
-    banner{
+    .banner{
         width: 255px;
         height: 100px;
         display: flex;
@@ -83,7 +76,7 @@ header ul {
         align-items: center;
         margin: auto;
         margin-left: 41.5%;
-        margin-top: 8%;
+        margin-top: 12%;
         color: #FFFFFF;
     }
     /*Hiển thị trang hiện tại đang truy cập*/
@@ -119,8 +112,9 @@ header ul {
     /*xây dựng phần thân*/
     /*tạo 1 khu vực chính dành cho thân*/
     .main_blog{
-        margin: auto;
-        width: 1500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 1400px;
         height: 1200px;
         white-space: nowrap;
         display: flex;
@@ -129,7 +123,7 @@ header ul {
     /*khu vực chính bên trong khu vực chính của thân chiếm 70% */
     .main_content{
         margin-top: 50px;
-        flex: 70%;
+        flex: 80%;
     }
     /*khu vực chính 70% chia làm 3 hàng- 4 cột*/
     .hang1,.hang2,.hang3{
@@ -138,13 +132,12 @@ header ul {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-left: 7%;
     }
     /*xét 12 ô trong khu vực 70% theo tỉ lệ 3x4*/
     .cot1,.cot2,.cot3,.cot4,.cot5,.cot6,.cot7,.cot8,.cot9,.cot10,.cot11,.cot12{
         width: 210px;
         height: 350px;
-        margin-top: 15%;
+        margin-top: 5%;
         margin-left: 5px;
         margin-right: 5px;
         border: 2px solid black;
@@ -162,7 +155,6 @@ header ul {
     
     .cot1_side,.cot2_side,.cot3_side,.cot4_side,.cot5_side,.cot6_side,.cot7_side,.cot8_side,.cot9_side,.cot10_side,.cot11_side,.cot12_side{
         height: 50%;
-
         max-width: 100%;
     }
     .cot1_main{
@@ -254,10 +246,10 @@ header ul {
     }
     /* khu vực phụ bên trong khu vực chính chiếm 30%*/
     .side_blog{
-        flex: 30%;
+        flex: 20%;
         height: 600px;
         margin-right: 1cm;
-        margin-top: 60px;
+        margin-top: 20px;
     }
     /* khu vực phụ 30% chia làm 3 hàng, chia đều cho cân bằng với cột chính 70%*/
     .thanh4,.thanh5,.thanh6{
@@ -353,7 +345,7 @@ header ul {
         height: 35px;
         margin: auto;
         margin-right: 49%;
-        margin-top: 2%;
+        margin-top: -4%;
         display: flex;
         justify-content:space-around;
         align-items: center;
@@ -428,11 +420,13 @@ header ul {
     footer{
         margin-top: 54.8%;
         z-index: 1000;
-        position: relative;}
+        position: relative;
+    }
     .container{
         width: 100%;
         max-width: var(--max-width-container);
-        height: 200%;
+        height: 1800px;
+        max-height: 1800px;
         margin: auto;
         padding: 20px;
     }

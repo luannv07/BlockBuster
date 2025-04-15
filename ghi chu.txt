@@ -16,7 +16,7 @@ header {
     z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-/*Thêm hiệuứng nổi bật ho nút sign-up và login*/
+/*Thêm hiệu ứng nổi bật ho nút sign-up và login*/
 .rounded-red-btn{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
     transition: box-shadow 0.25s ease-in-out;
