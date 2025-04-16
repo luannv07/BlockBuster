@@ -60,7 +60,6 @@ header ul {
     .main-wrapper {
         background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
         url('images/banner/banner\ 1.png');
-        background-position:center;
         background-size: cover;
         padding: 30px; 
         width: 100%;
@@ -88,6 +87,7 @@ header ul {
         align-items:center;
         justify-content: center;
         color: white;
+        cursor: pointer;
     }
     /* Hiển thị bản đồ trang đang truy cập*/
     .banner_side {
@@ -123,10 +123,11 @@ header ul {
     /*khu vực chính bên trong khu vực chính của thân chiếm 70% */
     .main_content{
         margin-top: 50px;
-        flex: 80%;
+        margin-right: -75px;
+        flex: 50%;
     }
     /*khu vực chính 70% chia làm 3 hàng- 4 cột*/
-    .hang1,.hang2,.hang3{
+    .hang1/*.hang2,.hang3*/{
         width: 90%;
         height: 364px;
         display: flex;
@@ -134,10 +135,10 @@ header ul {
         align-items: center;
     }
     /*xét 12 ô trong khu vực 70% theo tỉ lệ 3x4*/
-    .cot1,.cot2,.cot3,.cot4,.cot5,.cot6,.cot7,.cot8,.cot9,.cot10,.cot11,.cot12{
-        width: 210px;
+    .cot1/*,.cot2,.cot3,.cot4,.cot5,.cot6,.cot7,.cot8,.cot9,.cot10,.cot11,.cot12*/{
+        width: 250px;
         height: 350px;
-        margin-top: 5%;
+        margin-top: 1%;
         margin-left: 5px;
         margin-right: 5px;
         border: 2px solid black;
@@ -151,12 +152,19 @@ header ul {
 
     .cot1_main,.cot2_main,.cot3_main,.cot4_main,.cot5_main,.cot6_main,.cot7_main,.cot8_main,.cot9_main,.cot10_main,.cot11_main,.cot12_main{
         height: 50%;
+        background-color: #1183ee;
     }
     
     .cot1_side,.cot2_side,.cot3_side,.cot4_side,.cot5_side,.cot6_side,.cot7_side,.cot8_side,.cot9_side,.cot10_side,.cot11_side,.cot12_side{
         height: 50%;
         max-width: 100%;
     }
+    .cot1_main{
+        background-size: cover; 
+    background-repeat: no-repeat;
+    height: 200px; 
+    }
+    /*
     .cot1_main{
         background-image: url('images/blog-it1.jpg');
         background-size: cover;
@@ -205,8 +213,21 @@ header ul {
         background-image: url('images/blog-it2.jpg');
         background-size: cover;
     }
+        */
     /* giới hạn tối đa 3 dòng Hiển thị "..." khi bị tràn */
-    .cot1_content1, .cot1_content3 {
+    .cot1_content1 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Giới hạn 3 dòng */
+        -webkit-box-orient: vertical;
+        /*nếu bị tràn dòng, thay thế bằng "..."(ellipsis)*/
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: normal; /* Cho phép xuống dòng */
+        margin: 5px;
+        margin-left: 7px;
+        width: 90%;
+    }
+    .cot1_content3 {
         display: -webkit-box;
         -webkit-line-clamp: 3; /* Giới hạn 3 dòng */
         -webkit-box-orient: vertical;
@@ -244,12 +265,13 @@ header ul {
         margin-top: 5px;
         color: #FFFFFFCC;
     }
-    /* khu vực phụ bên trong khu vực chính chiếm 30%*/
+    /* khu vực phụ bên trong khu vực chính chiếm 15%*/
     .side_blog{
-        flex: 20%;
+        flex: 15%;
         height: 600px;
         margin-right: 1cm;
-        margin-top: 20px;
+        margin-top: 5px;
+        padding-left: -20px;
     }
     /* khu vực phụ 30% chia làm 3 hàng, chia đều cho cân bằng với cột chính 70%*/
     .thanh4,.thanh5,.thanh6{
@@ -344,7 +366,7 @@ header ul {
         width: 485px;
         height: 35px;
         margin: auto;
-        margin-right: 49%;
+        margin-right: 44%;
         margin-top: -4%;
         display: flex;
         justify-content:space-around;
