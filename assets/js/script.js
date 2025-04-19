@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 const setTinyHeader = (yAxis, wScreen, element) => {
-  // console.log(yAxis + " " + wScreen);
+  // console.log(yAxis + " " + wScreen);  
 
   if (yAxis > minActiveHeader && wScreen > 1240)
     element.classList.add("tiny");
