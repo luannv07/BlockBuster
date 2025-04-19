@@ -1,0 +1,45 @@
+git checkout duy : chuyển sang nhánh duy
+git checkout main : chuyển sang nhánh main
+* Sau khi code xong:
+git add . :chuyển vào mục sẵn sàng push lên branch duy
+git commit -m "tên commit" :chuyển các file ở trong mục sẵn sàng để push lên repository trên GitHub( tại nhánh branch duy)
+git push : chính thức đưa thư mục đã chỉnh sửa vào repository trên GitHub( tại nhánh branch duy)
+
+/* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
+
+header {
+
+    width: calc(var(--max-width-container) - 40px);
+    /*căn giữa menu*/
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/*Thêm hiệu ứng nổi bật ho nút sign-up và login*/
+.rounded-red-btn{
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.25s ease-in-out;
+  }
+    .rounded-red-btn:hover{
+        box-shadow: 0px 0px 15px rgba(20, 17, 17, 0.8);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .login_side{
+    	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+    	transition: box-shadow 0.25s ease-in-out;
+	}
+    .login_side:hover{
+        font-weight: bolder;
+        transition: font-weight 0.3s ease-in-out;
+    }
+
+
+/*do đặt ":root" không bao phủ toàn bộ màn hình, tôi đã điều chỉnh 1 chút*/
+
+:root {
+    --max-width-container: 100%;
+    --max-width-header: 100%;
+    --max-width-content: 100%;
+    --max-width-footer: 100%;
+}

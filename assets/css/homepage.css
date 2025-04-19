@@ -1,1 +1,549 @@
-lkdsjldskf
+div{
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.25s ease-out;
+}
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: -70px;
+}
+.main-wrapper {
+    background-color: #1E1E2F;
+    background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
+    url('images/banner/banner\ 1.png');
+    background-position:center;
+    background-size: cover;
+    padding: 30px; 
+    width: 100%;
+
+}
+/* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
+/*điều chỉnh kích thước của thanh menu*/
+/*header, màu background được thu nhỏ theo chiều dài*/
+header{
+    width: calc(var(--max-width-header) - 40px);
+    width: 90%;
+    /*căn giữa menu*/
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/*Điều chỉnh khoảng cách chữ trong thanh menu*/
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  /*thêm hiệu ứng cho thanh login và sign-up*/
+  .rounded-red-btn{
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.25s ease-in-out;
+  }
+    .rounded-red-btn:hover{
+        box-shadow: 0px 0px 15px rgba(20, 17, 17, 0.8);
+        transition: box-shadow 0.25s ease-in-out;
+    }
+    .login_side{
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+        transition: box-shadow 0.25s ease-in-out;
+    }
+    /*chữ nổi dần dần khi được di chuột vào*/
+        .login_side:hover{
+            font-weight: bolder;
+            transition: font-weight 0.3s ease-in-out;
+        }
+    .container {
+            background-color: transparent;
+            height: 2000px;
+          }
+.noi_dung_banner{
+    margin-top: 12%;
+    margin-left: 10%;
+    width: 165;
+    height: 32;
+    opacity: 0.8;
+    font-family: Segoe UI;
+    color: white;
+}
+.banner{
+    background-color: #051630B2;
+    display: flex;
+    width: 105%;
+    height: 450px;
+    margin-top: 40px;
+    margin-left: -3%;
+    overflow: hidden;
+}
+/*chèn ảnh bìa bên trong banner*/
+.anh1,.anh2,.anh3,.anh4,.anh5{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 445px;
+    border: 3px solid blue;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+.anh1:hover,.anh2:hover,.anh3:hover,.anh4:hover,.anh5:hover{
+    border: 3px solid #FFE836;
+}
+.anh1 {
+    background-image: url('images/slider1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.anh2{
+    background-image: url('images/slider3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.anh3{
+    background-image: url('images/slider2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.anh4{
+    background-image: url('images/mv-item4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.anh5{
+    background-image: url('images/slider4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.play {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 11, 11, 0.7);
+    padding: 10px 30px;
+    width: 100px;
+    /*Vo tròn khung*/
+    border-radius: 25px;
+    /*Nổi bật dần dần nút "play"*/
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+    transition:opacity 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+/*Hiển thị Play button*/
+.anh1:hover .play,
+.anh2:hover .play,
+.anh3:hover .play,
+.anh4:hover .play,
+.anh5:hover .play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    border: 3px solid #cdcbbc;
+    cursor: pointer;
+}
+/* tạo nút chuyển ảnh bìa bằng 3 radio*/
+.next_picture{
+    display: flex;
+    justify-content: right;
+    align-items:end;
+    margin-right: 20px;
+    margin-top: 30px;
+    gap: 10px;
+}
+/*chỉnh sửa kích thước radio, màu radio*/
+.next_picture input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    appearance: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+}
+.next_picture input[type="radio"]:checked {
+    /* Làm nổi bật nút radio được chọn */
+    background-color: orangered; 
+    border-color: orangered;
+}
+/*Body của trang*/
+body {
+    background-color: var(--background-color);
+  }
+.top_movies_banner{
+    height: 478px;
+    gap: 141px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+}
+.top_movies{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    width: 731px;
+    height: 478px;
+} 
+.top_movies_1{
+    width: 144px;
+    height: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    /* đặt chung thành 1 dòng*/
+    white-space: nowrap;
+    color: #f6f6f6;
+    margin-left: 10px;
+}
+.view_all{
+    width: 82px;
+    height: 32px;
+    white-space: nowrap;
+    text-decoration: underline;
+    color: #F6F6F6;
+    margin-left: 479px;
+    font-weight: bold;
+}
+.view_all:hover{
+    color:#2d5aff;
+    opacity: 1;
+    cursor: pointer;
+}
+.top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
+    display: flex;
+    width: 215px;
+    height: 350px;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 3px solid #C9C6AF;
+    cursor: pointer;
+}
+.top_movies_anh1{
+    background-image: url('images/mv-item1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.top_movies_anh2{
+        background-image: url('images/mv-item3.jpg');
+        background-size: cover;
+        background-position: center;
+}
+.top_movies_anh3{
+        background-image: url('images/mv-item2.jpg');
+        background-size: cover;
+        background-position: center;
+}
+.top_movies_anh1:hover,.top_movies_anh2:hover,.top_movies_anh3:hover{
+    border: 3px solid #FFE836;
+}
+/*Hiển thị đánh giá và huy hiệu top 1, 2, 3 phim hot nhất*/
+.huy_hieu1{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: gold; /* Màu huy hiệu */
+    color: black;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.huy_hieu2{
+    position: absolute;
+    /* điều chỉnh huy hiệu nằm ở vị trí góc trên bên trái*/
+    top: -10px;
+    left: -10px;
+    background-color: silver; /* Màu huy hiệu */
+    color: black;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.huy_hieu3{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #cd7f32; /* Màu huy hiệu */
+    color: black;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.top_movies_anh1,
+.top_movies_anh2,
+.top_movies_anh3 {
+    /* chỉnh sửa để huy hiệu hoạt động đúng*/
+    position: relative; 
+}
+.rating_container {
+    position: relative;
+    /* Đặt ở chân ảnh */
+    /*mỗi nội dung chỉ hiển thị trên mỗi dòng*/
+    bottom: 0; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: #FFFFFF;
+}
+.danh_gia {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+/*phân biệt giữa màu sắc của ngôi sao và điểm đánh giá*/
+.sao {
+    color: gold;
+}
+.score {
+    color: white;
+}
+
+/* hiển thị dần dần thanh đánh giá*/
+.top_movies_anh1:hover .rating_container,.top_movies_anh2:hover .rating_container,.top_movies_anh3:hover .rating_container {
+    opacity: 1; 
+    height: 80px;
+    transition: opacity 0.25s ease-in-out;
+    margin-top: 126%;
+    border-radius: 0 0 9px 9px;
+    background-color:  #020D18;
+}
+.top_director{
+    width: 357px;
+    height: 468px;
+}
+.head_top_director{
+    width: 357px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #F6F6F6;
+}
+.body_top_director{
+    width: 357px;
+    height: 400px;
+    gap: 42px;
+}
+.thanh1,.thanh2,.thanh3{
+    width: 357px;
+    height: 122px;
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+line1{
+    width: 30%;
+    height: 113px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+line2{
+    width: 70%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.pic1{
+    background-image: url('images/ava2.jpg');
+    background-position: center;
+    background-size: cover;
+    border: 3px solid gold;
+}
+.pic2{
+    background-image: url('images/ava1.jpg');
+    background-position: center;
+    background-size: cover;
+    border: 3px solid silver;
+}
+.pic3{
+    background-image: url('images/ava4.jpg');
+    background-position: center;
+    background-size: cover;
+    border: 3px solid #cd7f32;
+}
+.info1{
+    display: block;
+    height: 49%;
+    font-size: 24px;
+}
+.pic1:hover{
+    cursor: pointer;
+}
+.info2{
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+.info2:hover{
+    cursor: pointer;
+    color: #FFE836;
+}
+.info3{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.head_main_news{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 1200px;
+    height: 23px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color:#F6F6F6;
+}
+.main_news{
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    height: 350px;
+    margin:auto;
+}
+.thanh_chinh{
+    width: 20%;
+    height: 345px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+.thanh_chinh{
+    background-image: url('images/blog-it2.jpg');
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #f4f4f4;
+    cursor: pointer;
+}
+.thanh_phu{
+    width: 80%;
+    height: 349px;
+    justify-content: center;
+    align-items: center;
+}
+.thanh_phu1,.thanh_phu2,.thanh_phu3{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.thanh_phu1{
+    justify-content: start;
+    width: 819px;
+    height: 70px;
+    gap: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 24px;
+    color:#3F7DB2;
+    overflow: hidden;
+}
+.thanh_phu2{
+    justify-content: start;
+    width: 819px;
+    height: 30px;
+    gap: 25px;
+    padding-top: -20px;   
+    font-size: 16px;
+    color: #f6f6f6;
+}
+.thanh_phu3{
+    justify-content: start;
+    width: 819px;
+    height: 120px;
+    gap: 72px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 18px;
+    color: #FFFFFF;
+    /* nếu nội dung bị tràn, sẽ hiển thị dấu "..."*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}.thanh_phu1:hover,.thanh_phu3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color:#3F7DB2;
+}
+.head_more_news{
+    width: 1200px;
+    padding-top: 40px;
+    height: 25px;
+    display: flex;
+    justify-content: start;
+    align-items:start;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f6f6f6;
+}
+.bang_tin{
+    width: 1200px;
+    height: 400px;
+    padding-top: 40px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tin1,.tin2,.tin3,.tin4{
+    width: 560px;
+    height: 300px;
+    max-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin: 9px;
+    font-size: 20px;
+    overflow: hidden;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    color: #f6f6f6;
+}
+.highlight1{
+    color: #3F7DB2;
+    font-size: 20px;
+}
+.highlight1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.time{
+font-size: 16px;
+margin: auto;
+margin-top: 5px;
+width: 100%;
+color: #c6c2c2;
+}
+.time:hover{
+    cursor:default;
+}
+.slider-hidden{
+    opacity: 0.4;
+}
