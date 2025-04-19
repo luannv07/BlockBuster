@@ -11,8 +11,9 @@ h2{
 .main-wrapper {
     background-color: #1E1E2F;
     background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
-    url('images/banner/banner\ 1.png');
-    background-position:center;
+    url('../images/banner/banner.jpg');
+    background-image: url('../images/banner/banner.jpg');   
+    background-position: bottom;
     background-size: cover;
     padding: 30px; 
     width: 100%;
@@ -62,12 +63,12 @@ header{
 
 
 
-    .anh1 { background-image: url('images/slider1.jpg'); background-size: cover; background-position: center; }
-    .anh2 { background-image: url('images/slider3.jpg'); background-size: cover; background-position: center; }
-    .anh3 { background-image: url('images/slider2.jpg'); background-size: cover; background-position: center; }
-    .anh4 { background-image: url('images/mv-item4.jpg'); background-size: cover; background-position: center; }
-    .anh5 { background-image: url('images/slider4.jpg'); background-size: cover; background-position: center; }
-    .anh6 { background-image: url('images/mv-item8.jpg'); background-size: cover; background-position: center; }
+    .anh1 { background-image: url('../images/slider1.jpg'); background-size: cover; background-position: center; }
+    .anh2 { background-image: url('../images/slider3.jpg'); background-size: cover; background-position: center; }
+    .anh3 { background-image: url('../images/slider2.jpg'); background-size: cover; background-position: center; }
+    .anh4 { background-image: url('../images/mv-item4.jpg'); background-size: cover; background-position: center; }
+    .anh5 { background-image: url('../images/slider4.jpg'); background-size: cover; background-position: center; }
+    .anh6 { background-image: url('../images/mv-item8.jpg'); background-size: cover; background-position: center; }
     /*--------------- Play Button ---------------*/
 
     .banner {
@@ -246,17 +247,17 @@ body {
     cursor: pointer;
 }
 .top_movies_anh1{
-    background-image: url('images/mv-item1.jpg');
+    background-image: url('../images/mv-item1.jpg');
     background-size: cover;
     background-position: center;
 }
 .top_movies_anh2{
-        background-image: url('images/mv-item3.jpg');
+        background-image: url('../images/mv-item3.jpg');
         background-size: cover;
         background-position: center;
 }
 .top_movies_anh3{
-        background-image: url('images/mv-item2.jpg');
+        background-image: url('../images/mv-item2.jpg');
         background-size: cover;
         background-position: center;
 }
@@ -381,19 +382,19 @@ line2{
     margin-right: 20px;
 }
 .pic1{
-    background-image: url('images/ava2.jpg');
+    background-image: url('../images/ava2.jpg');
     background-position: center;
     background-size: cover;
     border: 3px solid gold;
 }
 .pic2{
-    background-image: url('images/ava1.jpg');
+    background-image: url('../images/ava1.jpg');
     background-position: center;
     background-size: cover;
     border: 3px solid silver;
 }
 .pic3{
-    background-image: url('images/ava4.jpg');
+    background-image: url('../images/ava4.jpg');
     background-position: center;
     background-size: cover;
     border: 3px solid #cd7f32;
@@ -451,7 +452,7 @@ line2{
     border: 2px solid black;
 }
 .thanh_chinh{
-    background-image: url('images/blog-it2.jpg');
+    background-image: url('../images/blog-it2.jpg');
     background-position: center;
     background-size: cover;
     border: 1px solid #f4f4f4;

@@ -41,7 +41,8 @@ header {
 
     .main-wrapper {
         background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
-        url('images/banner/banner\ 1.png');
+        url('../images/banner/banner.jpg');
+        background-position:center;
         background-size: cover;
         padding: 30px; 
         width: 100%;
@@ -136,7 +137,9 @@ header {
         height: 50%;
         background-color: #1183ee;
     }
-    
+    .cot1_main,.cot2_main,.cot3_main{
+        background-image: url('../images/blog-it1.jpg');
+    }
     .cot1_side,.cot2_side,.cot3_side,.cot4_side,.cot5_side,.cot6_side,.cot7_side,.cot8_side,.cot9_side,.cot10_side,.cot11_side,.cot12_side{
         height: 50%;
         max-width: 100%;
@@ -146,56 +149,7 @@ header {
     background-repeat: no-repeat;
     height: 200px; 
     }
-    /*
-    .cot1_main{
-        background-image: url('images/blog-it1.jpg');
-        background-size: cover;
-    }
-    .cot2_main{
-        background-image: url('images/blog-it1.jpg');
-        background-size: cover;
-    }
-    .cot3_main{
-        background-image: url('images/blog-it1.jpg');
-        background-size: cover;
-    }
-    .cot4_main{
-        background-image: url('images/blog-it1.jpg');
-        background-size: cover;
-    }
-    .cot5_main{
-        background-image: url('images/bloglist-it1.jpg');
-        background-size: cover;
-    }
-    .cot6_main{
-        background-image: url('images/bloglist-it1.jpg');
-        background-size: cover;
-    }
-    .cot7_main{
-        background-image: url('images/bloglist-it1.jpg');
-        background-size: cover;
-    }
-    .cot8_main{
-        background-image: url('images/bloglist-it1.jpg');
-        background-size: cover;
-    }
-    .cot9_main{
-        background-image: url('images/blog-it2.jpg');
-        background-size: cover;
-    }
-    .cot10_main{
-        background-image: url('images/blog-it2.jpg');
-        background-size: cover;
-    }
-    .cot11_main{
-        background-image: url('images/blog-it2.jpg');
-        background-size: cover;
-    }
-    .cot12_main{
-        background-image: url('images/blog-it2.jpg');
-        background-size: cover;
-    }
-        */
+
     /* giới hạn tối đa 3 dòng Hiển thị "..." khi bị tràn */
     .cot1_content1 {
         display: -webkit-box;
