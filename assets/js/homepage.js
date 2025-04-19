@@ -6,7 +6,7 @@ const WIDTH = document.querySelectorAll(".item")[0].clientWidth;
 console.log(WIDTH)
 controlItems.forEach(item => {
     item.addEventListener("click", (e) => {
-        console.log(e.target.attributes[0].value);
+        console.log(e);
         const active = document.querySelector(".active");
         active.classList.remove("active");
         e.target.classList.add("active");

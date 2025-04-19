@@ -83,9 +83,12 @@ header {
         padding: 5px;
         margin: auto;
     }
-    .banner_side1:hover{
+    a:hover{
         color:#1e7bd8;
         cursor: pointer;
+    }
+    a{
+        color: #ccc;
     }
     .banner_side2{
         color:#1e7bd8;

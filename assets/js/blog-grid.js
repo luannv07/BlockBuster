@@ -1,77 +1,75 @@
-
-// Dữ liệu mẫu bài viết
 const blogPosts = [
     {
         title: "Olivia Wilde Slams All-Female Blue Origin Flight: 'Billion Dollars Bought Some Good Memes I Guess' ",
         date: "15/04/2025",
         description: "Olivia Wilde has a few choice words about Blue Origin's first all-female flight crew making their way to the edge of space.Shortly after the New Shepard rocket returned from its round-trip expedition on Monday, April 14, the actress shared a meme on her Instagram Stories featuring two photographs of Katy Perry as she exited the capsule upon returning to Earth.One of the images showed Perry holding up a Daisy as she smiled from ear to ear while walking outside. The singer took a small daisy into space with her as a tribute to her daughter Daisy Dove Bloom, whom she shares with Orlando Bloom.",
-        image: "../images/ads1.png"
+        image:"../assets/images/blog-it1.jpg"
     },
     {
         title: "Olivia Wilde Slams All-Female Blue Origin Flight: 'Billion Dollars Bought Some Good Memes I Guess' ",
         date: "14/04/2025",
         description: "Olivia Wilde has a few choice words about Blue Origin's first all-female flight crew making their way to the edge of space.Shortly after the New Shepard rocket returned from its round-trip expedition on Monday, April 14, the actress shared a meme on her Instagram Stories featuring two photographs of Katy Perry as she exited the capsule upon returning to Earth.One of the images showed Perry holding up a Daisy as she smiled from ear to ear while walking outside. The singer took a small daisy into space with her as a tribute to her daughter Daisy Dove Bloom, whom she shares with Orlando Bloom.",
-        image: "../images/blog-it1.jpg"
+        image: "../assets/images/blog-it1.jpg"
     },
     {
         title: "Olivia Wilde Slams All-Female Blue Origin Flight: 'Billion Dollars Bought Some Good Memes I Guess' ",
         date: "12/04/2025",
         description: "Olivia Wilde has a few choice words about Blue Origin's first all-female flight crew making their way to the edge of space.Shortly after the New Shepard rocket returned from its round-trip expedition on Monday, April 14, the actress shared a meme on her Instagram Stories featuring two photographs of Katy Perry as she exited the capsule upon returning to Earth.One of the images showed Perry holding up a Daisy as she smiled from ear to ear while walking outside. The singer took a small daisy into space with her as a tribute to her daughter Daisy Dove Bloom, whom she shares with Orlando Bloom.",
-        image: "../images/blog-it1.jpg"
+        image: "../assets/images/blog-it1.jpg"
     },
     {
         title: "Olivia Wilde Slams All-Female Blue Origin Flight: 'Billion Dollars Bought Some Good Memes I Guess' ",
         date: "10/04/2025",
         description: "Olivia Wilde has a few choice words about Blue Origin's first all-female flight crew making their way to the edge of space.Shortly after the New Shepard rocket returned from its round-trip expedition on Monday, April 14, the actress shared a meme on her Instagram Stories featuring two photographs of Katy Perry as she exited the capsule upon returning to Earth.One of the images showed Perry holding up a Daisy as she smiled from ear to ear while walking outside. The singer took a small daisy into space with her as a tribute to her daughter Daisy Dove Bloom, whom she shares with Orlando Bloom.",
-        image: "../images/blog-it1.jpg"
+        image: "../assets/images/blog-it1.jpg"
     },
     {
         title: "Dwayne(The Rock) Johnson Loves Every Second of Being a Girl Dad — Here's the Proof",
         date: "10/04/2025",
         description: "'Every man wants a son, but every man needs a daughter,'- Johnson began a sweet post alongside Tiana on Instagram.",
-        image: "../images/bloglist-it1.jpg"
+        image: "../assets/images/bloglist-it1.jpg"
     },
     {
         title: "Dwayne(The Rock) Johnson Loves Every Second of Being a Girl Dad — Here's the Proof ",
         date: "10/04/2025",
         description: "'Every man wants a son, but every man needs a daughter,'- Johnson began a sweet post alongside Tiana on Instagram.",
-        image: "../images/bloglist-it1.jpg"
+        image: "../assets/images/bloglist-it1.jpg"
     },
     {
         title: "Dwayne(The Rock) Johnson Loves Every Second of Being a Girl Dad — Here's the Proof ",
         date: "10/04/2025",
         description: "'Every man wants a son, but every man needs a daughter,'- Johnson began a sweet post alongside Tiana on Instagram.",
-        image: "images/bloglist-it1.jpg"
+        image: "../assets/images/bloglist-it1.jpg"
     },
     {
         title: "Dwayne(The Rock) Johnson Loves Every Second of Being a Girl Dad — Here's the Proof ",
         date: "10/04/2025",
         description: "'Every man wants a son, but every man needs a daughter,'- Johnson began a sweet post alongside Tiana on Instagram.",
-        image: "images/bloglist-it1.jpg"
+        image: "../assets/images/bloglist-it1.jpg"
     },
     {
         title: "Prince Harry's Fight for His Future Exposes Deepening Rift with King Charles: 'They Are Distant,' Source Says (Exclusive) ",
         date: "10/04/2025",
         description: "As Prince Harry’s long-running legal fight over U.K. security reaches a pivotal moment, the Duke of Sussex’s relationship with his father, King Charles, remains strained — a sign that the wounds within the royal family are far from healed.",
-        image: "images/blog-it2.jpg"
+        image: "../assets/images/blog-it2.jpg"
     },
     {
         title: "Prince Harry's Fight for His Future Exposes Deepening Rift with King Charles: 'They Are Distant,' Source Says (Exclusive)",
         date: "10/04/2025",
         description: "As Prince Harry’s long-running legal fight over U.K. security reaches a pivotal moment, the Duke of Sussex’s relationship with his father, King Charles, remains strained — a sign that the wounds within the royal family are far from healed.",
-        image: "images/blog-it2.jpg"
+        image: "../assets/images/blog-it2.jpg"
     },
     {
         title: "Prince Harry's Fight for His Future Exposes Deepening Rift with King Charles: 'They Are Distant,' Source Says (Exclusive).",
         date: "10/04/2025",
         description: "As Prince Harry’s long-running legal fight over U.K. security reaches a pivotal moment, the Duke of Sussex’s relationship with his father, King Charles, remains strained — a sign that the wounds within the royal family are far from healed.",
-        image: "images/blog-it2.jpg"
+        image: "../assets/images/blog-it2.jpg"
     },
     {
         title: "Prince Harry's Fight for His Future Exposes Deepening Rift with King Charles: 'They Are Distant,' Source Says (Exclusive)",
         date: "10/04/2025",
         description: "As Prince Harry’s long-running legal fight over U.K. security reaches a pivotal moment, the Duke of Sussex’s relationship with his father, King Charles, remains strained — a sign that the wounds within the royal family are far from healed.",
-        image: "images/blog-it2.jpg"
+        image: "../assets/images/blog-it2.jpg"
     },
 
 ];
