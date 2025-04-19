@@ -1,12 +1,12 @@
 div{
     color: aliceblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: 0.25s ease-out;
+    transition: all 0.5s ease-out;
 }
 h2{
     font-size: 24px;
     font-weight: bold;
-    margin-left: -70px;
+    margin-left: 0px;
 }
 .main-wrapper {
     background-color: #1E1E2F;
@@ -22,22 +22,12 @@ h2{
 /*điều chỉnh kích thước của thanh menu*/
 /*header, màu background được thu nhỏ theo chiều dài*/
 header{
-    width: calc(var(--max-width-header) - 40px);
-    width: 90%;
     /*căn giữa menu*/
     left: 50%; 
     transform: translateX(-50%); 
     z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-/*Điều chỉnh khoảng cách chữ trong thanh menu*/
-header ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
   /*thêm hiệu ứng cho thanh login và sign-up*/
   .rounded-red-btn{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
@@ -63,23 +53,87 @@ header ul {
 .noi_dung_banner{
     margin-top: 12%;
     margin-left: 10%;
-    width: 165;
-    height: 32;
+    width: 165px;
+    height: 32px;
     opacity: 0.8;
     font-family: Segoe UI;
     color: white;
 }
-.banner{
-    background-color: #051630B2;
-    display: flex;
-    width: 105%;
-    height: 450px;
-    margin-top: 40px;
-    margin-left: -3%;
-    overflow: hidden;
-}
+
+
+
+    .anh1 { background-image: url('images/slider1.jpg'); background-size: cover; background-position: center; }
+    .anh2 { background-image: url('images/slider3.jpg'); background-size: cover; background-position: center; }
+    .anh3 { background-image: url('images/slider2.jpg'); background-size: cover; background-position: center; }
+    .anh4 { background-image: url('images/mv-item4.jpg'); background-size: cover; background-position: center; }
+    .anh5 { background-image: url('images/slider4.jpg'); background-size: cover; background-position: center; }
+    .anh6 { background-image: url('images/mv-item8.jpg'); background-size: cover; background-position: center; }
+    /*--------------- Play Button ---------------*/
+
+    .banner {
+        width: 103%;
+        height: 520px;
+        margin:auto;
+        margin-top: 10px;
+        margin-left: -1.5%;
+        position: relative;
+        overflow: hidden;
+        padding-top: 10px;
+        background-color:#385873;
+      }
+    .slider{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 15px;
+    }
+    .item {
+        /*width: 2000px !important;*/
+        min-width: 22.6%;
+        margin-left: 10px;
+        height: 500px;
+        border: 2px solid blue;
+    }
+    .controls {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 10px;
+        padding: 20px;
+    }
+    .control-item{
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+    }
+    .active {
+        background: orangered !important;
+    }
+    .play {
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 45%;
+        margin-left: 8.9%;
+        font-size: 20px;
+        color: white;
+        background: rgba(255, 11, 11, 0.7);
+        padding: 10px 30px;
+        width: 100px;
+        border-radius: 25px;
+        transition: opacity 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    }
+    
+
+*/
 /*chèn ảnh bìa bên trong banner*/
-.anh1,.anh2,.anh3,.anh4,.anh5{
+.anh1,.anh2,.anh3,.anh4,.anh5,.anh6{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -90,57 +144,18 @@ header ul {
     margin-right: 20px;
     margin-top: 2px;
 }
-.anh1:hover,.anh2:hover,.anh3:hover,.anh4:hover,.anh5:hover{
+
+.anh1:hover,.anh2:hover,.anh3:hover,.anh4:hover,.anh5:hover,.anh6:hover{
     border: 3px solid #FFE836;
 }
-.anh1 {
-    background-image: url('images/slider1.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh2{
-    background-image: url('images/slider3.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh3{
-    background-image: url('images/slider2.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh4{
-    background-image: url('images/mv-item4.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh5{
-    background-image: url('images/slider4.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.play {
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    font-size: 20px;
-    color: white;
-    background: rgba(255, 11, 11, 0.7);
-    padding: 10px 30px;
-    width: 100px;
-    /*Vo tròn khung*/
-    border-radius: 25px;
-    /*Nổi bật dần dần nút "play"*/
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
-    transition:opacity 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-}
+
 /*Hiển thị Play button*/
 .anh1:hover .play,
 .anh2:hover .play,
 .anh3:hover .play,
 .anh4:hover .play,
-.anh5:hover .play {
+.anh5:hover .play,
+.anh6:hover .play {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,6 +164,7 @@ header ul {
     border: 3px solid #cdcbbc;
     cursor: pointer;
 }
+
 /* tạo nút chuyển ảnh bìa bằng 3 radio*/
 .next_picture{
     display: flex;
@@ -173,6 +189,7 @@ header ul {
     background-color: orangered; 
     border-color: orangered;
 }
+
 /*Body của trang*/
 body {
     background-color: var(--background-color);
@@ -183,6 +200,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 3%;
     margin-top: 8%;
 }
 .top_movies{
@@ -408,6 +426,7 @@ line2{
     width: 1200px;
     height: 23px;
     margin: auto;
+    margin-right: 4.5%;
     padding-top: 40px;
     padding-bottom: 20px;
     margin-bottom: 10px;
@@ -421,6 +440,7 @@ line2{
     width: 1200px;
     height: 350px;
     margin:auto;
+    margin-right: 4.5%;
 }
 .thanh_chinh{
     width: 20%;
@@ -485,10 +505,12 @@ line2{
     -webkit-line-clamp: 5;
     overflow: hidden;
     text-overflow: ellipsis;
-}.thanh_phu1:hover,.thanh_phu3:hover{
+}
+.thanh_phu1:hover,.thanh_phu3:hover{
     cursor: pointer;
     text-decoration: underline;
     color:#3F7DB2;
+    transition: color 0.3s ease-in;
 }
 .head_more_news{
     width: 1200px;
@@ -498,6 +520,7 @@ line2{
     justify-content: start;
     align-items:start;
     margin: auto;
+    margin-right: 4.5%;
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -508,6 +531,7 @@ line2{
     height: 400px;
     padding-top: 40px;
     margin: auto;
+    margin-right: 4.2%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -543,7 +567,4 @@ color: #c6c2c2;
 }
 .time:hover{
     cursor:default;
-}
-.slider-hidden{
-    opacity: 0.4;
 }
