@@ -12,22 +12,12 @@ body{
 
 /*header, màu background được thu nhỏ theo chiều dài*/
 header {
-    width: calc(var(--max-width-container) - 40px);
-    max-width: var(--max-width-header);
-    width: 90%;
     /*căn giữa menu*/
     left: 50%; 
     transform: translateX(-50%); 
     z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-header ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
 /*nổi bật cho thanh sign-up và login*/
 .rounded-red-btn{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
@@ -46,14 +36,6 @@ header ul {
         font-weight: bolder;
         transition: font-weight 0.3s ease-in-out;
     }
-/* đặt wrapper trang được bao phủ toàn bộ*/
-.wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /*background hình lửa trại bên trong header*/
 
