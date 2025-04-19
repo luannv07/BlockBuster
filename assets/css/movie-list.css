@@ -33,12 +33,13 @@ body {
 
 .img-top::before {
   content: "";
-  background: #051630;
+  background: var(--background-color);
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .img-top::before,
@@ -70,7 +71,7 @@ select:focus {
 }
 
 .left-box {
-  width: 70%;
+  flex: 7;
   /* margin-right: 40px; */
   padding-right: 40px;
 }
@@ -145,7 +146,7 @@ option {
 }
 
 .right-box {
-  width: 30%;
+  flex: 3;
 }
 
 .right-box h2 {
@@ -249,4 +250,32 @@ img {
 .active-pagination-link {
   border-color: #FFE836 !important;
   color: #FFE836 !important;
+}
+
+/* mobile: < 768, ipad: >= 768 && < 991, laptop: >=992  */
+@media screen and (max-width: 1366px) {
+  .movie-list li div:first-child {
+    flex: 3;
+  }
+
+  .movie-list li div:last-child {
+    flex: 7;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .movie-list li div:first-child {
+    flex: 3;
+  }
+
+  .movie-list li div:last-child {
+    flex: 7;
+  }
+
+  .movie-list li div:last-child .movie-date-runtime,
+  .movie-list li div:last-child .movie-director,
+  .movie-list li div:last-child hr,
+  .movie-list li div:last-child small {
+    display: none;
+  }
 }
