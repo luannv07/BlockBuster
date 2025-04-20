@@ -1,4 +1,5 @@
 *{max-width: 100%}
+
 div{
     color: aliceblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -567,3 +568,176 @@ color: #c6c2c2;
 .time:hover{
     cursor:default;
 }
+@media screen and (max-width: 1615px) {
+    * {
+      max-width: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .play{
+        display: none !important;   
+    }
+    .play2{
+        display: none;
+    }
+    .danh_gia{
+        display: none;
+    }
+    .item{
+        width: 50%;
+    }
+    .top_movies_banner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
+        padding: 10%;
+        width: 30%;
+    }
+    .rating_container{
+        display: none;
+    }
+    .head_top_director{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3F7DB2;
+    }
+    .head_main_news{
+        margin-top: 50%;
+    }
+    .more_new{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .view_all{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .top_movies_1{
+        margin: auto;
+        margin-left: 40%;
+    }
+    footer{
+        display: block;
+        margin-top: 25%;
+    }
+  }
+@media screen and (min-width: 891px) and (max-width: 1300px) {
+    * {
+        max-width: 100%;
+    }
+    .banner {
+        width: 100%;
+    }
+    .play {
+        display: none !important;
+    }
+    .play2 {
+        display: none;
+    }
+    .danh_gia {
+        display: none;
+    }
+    .item {
+        width: 50%;
+    }
+    .top_movies_banner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top_movies_anh1, .top_movies_anh2, .top_movies_anh3 {
+        width: 30%;
+    }
+    .rating_container {
+        display: none;
+    }
+    .head_top_director {
+        background-color: #3F7DB2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .head_main_news {
+        margin-top: 85%;
+    }
+    .more_new {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .view_all {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .top_movies_1 {
+        margin-left: 40%;
+    }
+    footer {
+        display: block;
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    *{
+        max-width: 100%;
+    }
+        .banner{
+              width: 100%;
+          }
+          .play{
+              display: none !important;   
+          }
+          .play2{
+              display: none;
+          }
+          .danh_gia{
+              display: none;
+          }
+          .item{
+              width: 50%;
+          }
+          .top_movies_banner{
+              display: flex;
+              flex-wrap: wrap;
+          }
+          .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
+            display: block;
+              width: 100%;
+              margin-top: 3px;
+              margin-bottom: 3px;
+         }
+          .rating_container{
+              display: none;
+          }
+          .top_director{
+            margin-top: 153%;
+          }
+          .head_top_director{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .head_main_news{
+              margin-top: 320%;
+          }
+          .more_new{
+              display: flex;
+              flex-wrap: wrap;
+              margin: auto;
+          }
+          .view_all{
+            display: none;
+          }
+          .top_movies_1{
+            margin: auto;
+          }
+          footer{
+            display: flex;
+            flex-wrap: wrap;
+              margin-top: 200%;
+          }
+          
+        }

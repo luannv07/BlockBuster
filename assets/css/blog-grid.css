@@ -406,3 +406,172 @@ header {
         margin: auto;
         padding: 20px;
     }
+    @media screen and (max-width: 1615px) {
+        *{
+            max-width: 100%;
+        }
+        .banner{
+        }
+        .main_blog{
+            display:block;
+            margin: auto;
+            width: 100%;
+        }
+        .main_content{
+            margin: auto;
+            /*căn giữa*/
+            margin-left: 10%;
+        }
+        .side_blog{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 100%;
+            margin-top: 20%;
+        }
+        /*lùi thanh tìm kiếm về cuối*/
+        .S_content{
+            margin: auto;
+        }
+        .thanh4,.thanh5,.thanh6{
+            width: 80%;
+            margin: auto;
+        }
+        .row_search, .tag_of_categories,.tag_of_tag{
+            margin: auto;
+        }
+        .tag_of_tag{
+            display: flex;
+            justify-content: center;
+        }
+        .sang_trang{
+            margin: auto;
+        }
+        #search-box{
+            margin: auto;
+            margin-left: 39%;
+        }
+        footer{
+            margin-top: 100%;
+        }
+    }
+    @media screen and (min-width: 891px) and (max-width: 1300px){
+        *{
+            max-width: 100%;
+        }
+        .banner{
+        }
+        .main_blog{
+            display:block;
+            margin: auto;
+            width: 100%;
+        }
+        .main_content{
+            margin: auto;
+            /*căn giữa*/
+            margin-left: 10%;
+        }
+        .side_blog{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 100%;
+            margin-top: 20%;
+        }
+        /*lùi thanh tìm kiếm về cuối*/
+        .S_content{
+            margin: auto;
+        }
+        .thanh4,.thanh5,.thanh6{
+            width: 80%;
+            margin: auto;
+        }
+        .row_search, .tag_of_categories,.tag_of_tag{
+            margin: auto;
+        }
+        .tag_of_tag{
+            display: flex;
+            justify-content: center;
+        }
+        .sang_trang{
+            margin: auto;
+        }
+        #search-box{
+            margin: auto;
+            margin-left: 39%;
+        }
+        footer{
+            margin-top: 120%;
+        }
+    }
+    @media screen and (max-width:890px) {
+        .hang1 {
+            display: flex; /* Chuyển từ flex sang block để mỗi bài viết xuống dòng */
+            flex-wrap: wrap;
+            width: 100%;
+            height: 720px;
+        }
+        .cot1{
+            width: 40%;
+        }
+        *{
+            max-width: 100%;
+        }
+        .banner{
+        }
+        .main_blog{
+            display:block;
+            margin: auto;
+            width: 100%;
+        }
+        .main_content{
+            margin: auto;
+            /*căn giữa*/
+            margin-left: 10%;
+        }
+        .side_blog{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap:wrap;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 100%;
+            margin-top: 20%;
+        }
+        /*lùi thanh tìm kiếm về cuối*/
+        .S_content{
+            margin: auto;
+        }
+        .thanh4,.thanh5,.thanh6{
+            width: 80%;
+            margin: auto;
+        }
+        .row_search, .tag_of_categories,.tag_of_tag{
+            margin: auto;
+        }
+        .tag_of_tag{
+            display: flex;
+            justify-content: center;
+        }
+        .sang_trang{
+            display: none;
+        }
+        #search-box{
+            margin: auto;
+            margin-left: 39%;
+        }
+        footer{
+            opacity: 0.8;
+            margin-top: 400%;
+        }
+    }
+    @media screen and (max-width:730px){
+        .banner{
+            margin: auto;
+            margin-top: 35%;
+        }
+    }
