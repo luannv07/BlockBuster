@@ -183,7 +183,15 @@
                             <div class="S_content">Search</div>
                             <hr>
                             <div class="row_search">
-                                <input type="text" class="thanh_search" placeholder="Search blog...">
+                                <input type="text" class="thanh_search" placeholder="Search blog..." list="previous-searches">
+                                <datalist id="previous-searches">
+                                    <option value="#Marvel"></option>
+                                    <option value="#DC"></option>
+                                    <option value="#XamluocCampuchia"></option>
+                                    <option value="#Free Palestine"></option>
+                                    <option value="#Drama"></option>
+                                    <option value="New movies this month"></option>
+                                </datalist>
                                 <button class="thanh_tim_kiem">Tìm kiếm</button>
                             </div>
                         </div>
@@ -214,8 +222,6 @@
                         </div>
                     </div> 
                 </div>
-
-              
                 <div class="sang_trang">
                     <div class="o1">P</div>
                     <div class="o1">1</div>
@@ -224,18 +230,29 @@
                     <div class="o1">4</div>
                     <div class="o1">5</div>
                     <div class="o1">
-                        <div class="dots-container">
-                            <span class="dots">...</span>
-                            <div class="search-box">
-                                <input type="number" placeholder="Nhập số trang...">
-                            </div>
-                            <button class="thanh_tim_kiem2">Đi</button>
-                        </div>
+                        <div id="dots">&#128269;</div> 
                     </div>
                     <div class="o1">10</div>
                     <div class="o1">20</div>
                     <div class="o1">N</div>
                 </div>
+                
+                <!-- Hộp tìm kiếm khi nhấn thanh [...] -->
+                <div id="search-box">
+                    <input class="thanh_tim_kiem2" type="number" placeholder="          Nhập số trang">
+                    <button class="tim_kiem"> Find</button>
+                    <button id="close-search">Close</button>
+                </div>
+
+                <script>
+                document.getElementById('dots').addEventListener('click', function() {
+                    document.getElementById('search-box').style.display = 'block';
+                });
+                
+                document.getElementById('close-search').addEventListener('click', function() {
+                    document.getElementById('search-box').style.display = 'none';
+                });
+                </script> 
             </main>
         </div>
     </div><!--Viết bên trong khu vực main/ thân trang web-->

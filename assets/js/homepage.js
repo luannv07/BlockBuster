@@ -14,3 +14,4 @@ controlItems.forEach(item => {
         = `translate(-${Number(e.target.attributes[0].value)*WIDTH}px)`;
     })
 })
+
