@@ -17,7 +17,7 @@ h2{
     background-position: bottom;
     background-size: cover;
     padding: 30px; 
-    width: 100%;
+    padding-top: 20px;
 
 }
 /* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
