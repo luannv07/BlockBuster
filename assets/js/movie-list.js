@@ -142,7 +142,7 @@ const renderMovieList = (moviesList) => {
                       width="100%" style="border-radius: 10px;" alt="1"></a>
                 </div>
                 <div class="movie-content-box" style="overflow: hidden;">
-                  <a href="#" >
+                  <a href="../pages/movie-details.html" >
                     <h2 style="font-size: 18px; font-weight: bold;">${phim.title} (${phim.year})</h2>
                   </a>
                   <span>⭐${phim.rating}/10</span>

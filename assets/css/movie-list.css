@@ -258,6 +258,14 @@ img {
   .section-body {
     display: block;
   }
+
+  * {
+    max-width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1366px) {
@@ -267,6 +275,14 @@ img {
 
   .movie-list li div:last-child {
     flex: 7;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  .left-box {
+    padding: 0;
   }
 }
 
@@ -284,6 +300,10 @@ img {
   .movie-list li div:last-child hr,
   .movie-list li div:last-child small {
     display: none;
+  }
+
+  * {
+    max-width: 100%;
   }
 }
 
@@ -392,8 +412,4 @@ img {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-header {
-  z-index: 9999;
 }
