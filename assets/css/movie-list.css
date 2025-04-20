@@ -33,12 +33,13 @@ body {
 
 .img-top::before {
   content: "";
-  background: #051630;
+  background: var(--background-color);
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  opacity: 0.5;
+  opacity: .5;
 }
 
 .img-top::before,
@@ -47,7 +48,7 @@ body {
 }
 
 select {
-  border: 1px solid #ccc;
+  border-left: 2px solid #ccc;
   background-color: transparent;
   padding: 5px;
   font-size: 16px;
@@ -70,7 +71,7 @@ select:focus {
 }
 
 .left-box {
-  width: 70%;
+  flex: 7;
   /* margin-right: 40px; */
   padding-right: 40px;
 }
@@ -107,6 +108,7 @@ option {
   margin-top: 15px;
   border: 1px solid rgba(255, 232, 54, .2);
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .movie-list li div:first-child {
@@ -119,7 +121,7 @@ option {
 
 .movie-list li div:last-child {
   padding: 0 20px;
-  opacity: .8;
+  /* opacity: .8; */
   flex: 8;
 }
 
@@ -137,7 +139,7 @@ option {
 }
 
 .movie-list li:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .movie-list li:hover h2 {
@@ -145,7 +147,7 @@ option {
 }
 
 .right-box {
-  width: 30%;
+  flex: 3;
 }
 
 .right-box h2 {
@@ -217,7 +219,7 @@ img {
 }
 
 .pagination {
-  padding: 20px 0 0 0;
+  padding: 20px 0 20px 0;
 }
 
 .pagination * {
@@ -249,4 +251,165 @@ img {
 .active-pagination-link {
   border-color: #FFE836 !important;
   color: #FFE836 !important;
+}
+
+/* mobile: < 768, ipad: >= 768 && < 991, laptop: >=992  */
+@media screen and (max-width: 991px) {
+  .section-body {
+    display: block;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .movie-list li div:first-child {
+    flex: 3;
+  }
+
+  .movie-list li div:last-child {
+    flex: 7;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  .left-box {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .movie-list li div:first-child {
+    flex: 3;
+  }
+
+  .movie-list li div:last-child {
+    flex: 7;
+  }
+
+  .movie-list li div:last-child .movie-date-runtime,
+  .movie-list li div:last-child .movie-director,
+  .movie-list li div:last-child hr,
+  .movie-list li div:last-child small {
+    display: none;
+  }
+
+  * {
+    max-width: 100%;
+  }
+}
+
+.breadcumb * {
+  animation: showAndMoveY ease;
+}
+
+.breadcumb h1 {
+  animation-duration: 1s;
+}
+
+.breadcumb p {
+  animation-duration: .5s;
+}
+
+.movie-list li.active-animation .movie-content-box * {
+  animation: showAndMoveX ease;
+}
+
+.movie-list li.active-animation .movie-content-box a h2 {
+  animation-duration: .5s;
+}
+
+.movie-list li.active-animation .movie-content-box span {
+  animation-duration: .75s;
+  display: block;
+}
+
+.movie-list li.active-animation .movie-content-box p {
+  animation-duration: .95s;
+}
+
+.movie-list li.active-animation .movie-content-box small {
+  animation-duration: 1s;
+  display: block;
+}
+
+.movie-list li.active-animation .movie-content-box div {
+  animation-duration: 1.25s;
+}
+
+.movie-list li.active-animation div a img {
+  animation-name: showAndMoveYR;
+  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+}
+
+.commons {
+  animation: .75s showAndMoveYR ease-out;
+}
+
+.right-box {
+  animation: .5s showAndMoveYR ease-out;
+}
+
+.movie-list li.active-animation .movie-content-box hr {
+  animation: showAndMoveXR ease;
+  animation-duration: 1s;
+  display: block;
+}
+
+
+@keyframes showAndMoveX {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showAndMoveY {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showAndMoveXR {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showAndMoveYR {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
