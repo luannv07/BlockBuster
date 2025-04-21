@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/user-favorite-grid.css" />
+    <title>Luan | Movie List</title>
+  </head>
+  <body>
+    <div class="top-banner">
+      <img src="../assets/images/banner/banner.jpg" alt="Banner background" />
+      <div class="nav-wrapper">
+        <nav class="custom-header-nav">
+          <ul class="nav-left">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Movie List</a></li>
+            <li><a href="#">Blog List</a></li>
+            <li><a href="#">Blog Grid</a></li>
+            <li><a href="#">User Favorite Grid</a></li>
+          </ul>
+          <ul class="nav-right">
+            <li><a href="#">Login</a></li>
+            <li><a class="btn-signup" href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <aside class="sidebar">
+          <div class="avatar">
+            <img src="../assets/images/banner/banner.jpg" alt="Avatar" />
+            <button class="change-avatar">CHANGE AVATAR</button>
+          </div>
+          <nav class="menu">
+            <p class="section-title">Account details</p>
+            <a href="#">PROFILE</a>
+            <a href="#" class="active">USER FAVORITE GRID</a>
+            <a href="#">RATED MOVIES</a>
+            <p class="section-title">Others</p>
+            <a href="#">CHANGE PASSWORD</a>
+            <a href="#">LOGOUT</a>
+          </nav>
+        </aside>
+        <main class="main-content">
+          <h1>NGUYEN VAN LUAN’S PROFILE</h1>
+          <p class="breadcrumb">HOME > FAVORITE MOVIES</p>
+
+          <div class="filter-bar">
+            <span>Found: <span id="movieCount">7</span> movies</span>
+            <div class="view-toggle">
+              <button id="listViewBtn" class="active">LIST</button>
+              <button id="gridViewBtn">GRID</button>
+            </div>
+            <div class="sort">
+              <label for="sort">Sort by:</label>
+              <select id="sort">
+                <option>Rating ASC</option>
+                <option>Rating DESC</option>
+              </select>
+            </div>
+          </div>
+
+          <ul class="userFavoriteGrid list-view" id="userFavoriteGrid"></ul>
+        </main>
+      </div>
+      <div class="pagination-wrapper">
+        <div class="pagination">
+          <ul>
+            <li><a href="#">P</a></li>
+            <li><a class="active-pagination-link" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">13</a></li>
+            <li><a href="#">14</a></li>
+            <li><a href="#">N</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="container-flex">
+        <p>
+          Nhóm sinh viên thực hiện (D18CNPM4): Nguyễn Văn Luận, Nguyễn Đình Duy,
+          Nguyễn Trọng An
+        </p>
+      </footer>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/user-favorite-grid.js"></script>
+  </body>
+</html>
