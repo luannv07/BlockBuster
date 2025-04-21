@@ -1,43 +1,36 @@
+*{max-width: 100%}
+
 div{
     color: aliceblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: 0.25s ease-out;
+    transition: all 0.5s ease-out;
 }
 h2{
     font-size: 24px;
     font-weight: bold;
-    margin-left: -70px;
+    margin-left: 0px;
 }
 .main-wrapper {
     background-color: #1E1E2F;
     background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
-    url('images/banner/banner\ 1.png');
-    background-position:center;
+    url('../images/banner/banner.jpg');
+    background-image: url('../images/banner/banner.jpg');   
+    background-position: bottom;
     background-size: cover;
     padding: 30px; 
-    width: 100%;
+    padding-top: 20px;
 
 }
 /* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
 /*điều chỉnh kích thước của thanh menu*/
 /*header, màu background được thu nhỏ theo chiều dài*/
 header{
-    width: calc(var(--max-width-header) - 40px);
-    width: 90%;
     /*căn giữa menu*/
     left: 50%; 
     transform: translateX(-50%); 
     z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-/*Điều chỉnh khoảng cách chữ trong thanh menu*/
-header ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
   /*thêm hiệu ứng cho thanh login và sign-up*/
   .rounded-red-btn{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
@@ -63,23 +56,110 @@ header ul {
 .noi_dung_banner{
     margin-top: 12%;
     margin-left: 10%;
-    width: 165;
-    height: 32;
+    width: 165px;
+    height: 32px;
     opacity: 0.8;
     font-family: Segoe UI;
     color: white;
 }
-.banner{
-    background-color: #051630B2;
-    display: flex;
-    width: 105%;
-    height: 450px;
-    margin-top: 40px;
-    margin-left: -3%;
-    overflow: hidden;
+    .anh1 { background-image: url('../images/slider1.jpg'); background-size: cover; background-position: center; }
+    .anh2 { background-image: url('../images/slider3.jpg'); background-size: cover; background-position: center; }
+    .anh3 { background-image: url('../images/slider2.jpg'); background-size: cover; background-position: center; }
+    .anh4 { background-image: url('../images/mv-item4.jpg'); background-size: cover; background-position: center; }
+    .anh5 { background-image: url('../images/slider4.jpg'); background-size: cover; background-position: center; }
+    .anh6 { background-image: url('../images/mv-item8.jpg'); background-size: cover; background-position: center; }
+
+    .banner {
+        width: 100%;
+        height: 520px;
+        margin:auto;
+        margin-top: 10px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 10px;
+        background-color:#385873;
+      }
+    .slider{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 15px;
+    }
+    .item {
+        /*width: 2000px !important;*/
+        min-width: 22.6%;
+        margin-left: 10px;
+        height: 500px;
+        border: 2px solid blue;
+        border-radius: 10px;
+    }
+    .controls {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 10px;
+        padding: 20px;
+    }
+    .control-item{
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+    }
+    .active {
+        background: orangered !important;
+    }
+    .play {
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 45%;
+        margin-left: 8.3%;
+        font-size: 20px;
+        color: white;
+        background: rgba(255, 11, 11, 0.7);
+        padding: 10px 30px;
+        width: 100px;
+        border-radius: 25px;
+        transition: opacity 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    }
+    .play2{
+        background-color: #2d5aff;
+        position: relative;
+        /* Đặt ở chân ảnh */
+        /*mỗi nội dung chỉ hiển thị trên mỗi dòng*/
+        /*phông chữ mờ đi*/
+        text-align: center;
+        font-style: italic;
+        bottom: 0;
+        margin-top: 113.1%; 
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:  #020D18;
+        color: #FFFFFF;
+        border-radius: 0 0 9px 9px;
+        opacity: 0;
+    }
+    .anh1:hover .play2,
+.anh2:hover .play2,
+.anh3:hover .play2,
+.anh4:hover .play2,
+.anh5:hover .play2,
+.anh6:hover .play2{
+    opacity: 0.9;
 }
+*/
 /*chèn ảnh bìa bên trong banner*/
-.anh1,.anh2,.anh3,.anh4,.anh5{
+.anh1,.anh2,.anh3,.anh4,.anh5,.anh6{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -90,57 +170,18 @@ header ul {
     margin-right: 20px;
     margin-top: 2px;
 }
-.anh1:hover,.anh2:hover,.anh3:hover,.anh4:hover,.anh5:hover{
+
+.anh1:hover,.anh2:hover,.anh3:hover,.anh4:hover,.anh5:hover,.anh6:hover{
     border: 3px solid #FFE836;
 }
-.anh1 {
-    background-image: url('images/slider1.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh2{
-    background-image: url('images/slider3.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh3{
-    background-image: url('images/slider2.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh4{
-    background-image: url('images/mv-item4.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.anh5{
-    background-image: url('images/slider4.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.play {
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    font-size: 20px;
-    color: white;
-    background: rgba(255, 11, 11, 0.7);
-    padding: 10px 30px;
-    width: 100px;
-    /*Vo tròn khung*/
-    border-radius: 25px;
-    /*Nổi bật dần dần nút "play"*/
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
-    transition:opacity 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-}
+
 /*Hiển thị Play button*/
 .anh1:hover .play,
 .anh2:hover .play,
 .anh3:hover .play,
 .anh4:hover .play,
-.anh5:hover .play {
+.anh5:hover .play,
+.anh6:hover .play {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,30 +189,6 @@ header ul {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
     border: 3px solid #cdcbbc;
     cursor: pointer;
-}
-/* tạo nút chuyển ảnh bìa bằng 3 radio*/
-.next_picture{
-    display: flex;
-    justify-content: right;
-    align-items:end;
-    margin-right: 20px;
-    margin-top: 30px;
-    gap: 10px;
-}
-/*chỉnh sửa kích thước radio, màu radio*/
-.next_picture input[type="radio"] {
-    width: 12px;
-    height: 12px;
-    appearance: none;
-    border: 1px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: white;
-}
-.next_picture input[type="radio"]:checked {
-    /* Làm nổi bật nút radio được chọn */
-    background-color: orangered; 
-    border-color: orangered;
 }
 /*Body của trang*/
 body {
@@ -183,6 +200,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 3%;
     margin-top: 8%;
 }
 .top_movies{
@@ -228,17 +246,17 @@ body {
     cursor: pointer;
 }
 .top_movies_anh1{
-    background-image: url('images/mv-item1.jpg');
+    background-image: url('../images/mv-item1.jpg');
     background-size: cover;
     background-position: center;
 }
 .top_movies_anh2{
-        background-image: url('images/mv-item3.jpg');
+        background-image: url('../images/mv-item3.jpg');
         background-size: cover;
         background-position: center;
 }
 .top_movies_anh3{
-        background-image: url('images/mv-item2.jpg');
+        background-image: url('../images/mv-item2.jpg');
         background-size: cover;
         background-position: center;
 }
@@ -363,19 +381,19 @@ line2{
     margin-right: 20px;
 }
 .pic1{
-    background-image: url('images/ava2.jpg');
+    background-image: url('../images/ava2.jpg');
     background-position: center;
     background-size: cover;
     border: 3px solid gold;
 }
 .pic2{
-    background-image: url('images/ava1.jpg');
+    background-image: url('../images/ava1.jpg');
     background-position: center;
     background-size: cover;
     border: 3px solid silver;
 }
 .pic3{
-    background-image: url('images/ava4.jpg');
+    background-image: url('../images/ava4.jpg');
     background-position: center;
     background-size: cover;
     border: 3px solid #cd7f32;
@@ -408,6 +426,7 @@ line2{
     width: 1200px;
     height: 23px;
     margin: auto;
+    margin-right: 4.5%;
     padding-top: 40px;
     padding-bottom: 20px;
     margin-bottom: 10px;
@@ -421,6 +440,7 @@ line2{
     width: 1200px;
     height: 350px;
     margin:auto;
+    margin-right: 4.5%;
 }
 .thanh_chinh{
     width: 20%;
@@ -431,7 +451,7 @@ line2{
     border: 2px solid black;
 }
 .thanh_chinh{
-    background-image: url('images/blog-it2.jpg');
+    background-image: url('../images/blog-it2.jpg');
     background-position: center;
     background-size: cover;
     border: 1px solid #f4f4f4;
@@ -485,10 +505,12 @@ line2{
     -webkit-line-clamp: 5;
     overflow: hidden;
     text-overflow: ellipsis;
-}.thanh_phu1:hover,.thanh_phu3:hover{
+}
+.thanh_phu1:hover,.thanh_phu3:hover{
     cursor: pointer;
     text-decoration: underline;
     color:#3F7DB2;
+    transition: color 0.3s ease-in;
 }
 .head_more_news{
     width: 1200px;
@@ -498,6 +520,7 @@ line2{
     justify-content: start;
     align-items:start;
     margin: auto;
+    margin-right: 4.5%;
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -508,6 +531,7 @@ line2{
     height: 400px;
     padding-top: 40px;
     margin: auto;
+    margin-right: 4.2%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -544,6 +568,176 @@ color: #c6c2c2;
 .time:hover{
     cursor:default;
 }
-.slider-hidden{
-    opacity: 0.4;
+@media screen and (max-width: 1615px) {
+    * {
+      max-width: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .play{
+        display: none !important;   
+    }
+    .play2{
+        display: none;
+    }
+    .danh_gia{
+        display: none;
+    }
+    .item{
+        width: 50%;
+    }
+    .top_movies_banner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
+        padding: 10%;
+        width: 30%;
+    }
+    .rating_container{
+        display: none;
+    }
+    .head_top_director{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3F7DB2;
+    }
+    .head_main_news{
+        margin-top: 50%;
+    }
+    .more_new{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .view_all{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .top_movies_1{
+        margin: auto;
+        margin-left: 40%;
+    }
+    footer{
+        display: block;
+        margin-top: 25%;
+    }
+  }
+@media screen and (min-width: 891px) and (max-width: 1300px) {
+    * {
+        max-width: 100%;
+    }
+    .banner {
+        width: 100%;
+    }
+    .play {
+        display: none !important;
+    }
+    .play2 {
+        display: none;
+    }
+    .danh_gia {
+        display: none;
+    }
+    .item {
+        width: 50%;
+    }
+    .top_movies_banner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .top_movies_anh1, .top_movies_anh2, .top_movies_anh3 {
+        width: 30%;
+    }
+    .rating_container {
+        display: none;
+    }
+    .head_top_director {
+        background-color: #3F7DB2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .head_main_news {
+        margin-top: 85%;
+    }
+    .more_new {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .view_all {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .top_movies_1 {
+        margin-left: 40%;
+    }
+    footer {
+        display: block;
+        margin-top: 50%;
+    }
 }
+
+@media screen and (max-width: 890px) {
+    *{
+        max-width: 100%;
+    }
+        .banner{
+              width: 100%;
+          }
+          .play{
+              display: none !important;   
+          }
+          .play2{
+              display: none;
+          }
+          .danh_gia{
+              display: none;
+          }
+          .item{
+              width: 50%;
+          }
+          .top_movies_banner{
+              display: flex;
+              flex-wrap: wrap;
+          }
+          .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
+            display: block;
+              width: 100%;
+              margin-top: 3px;
+              margin-bottom: 3px;
+         }
+          .rating_container{
+              display: none;
+          }
+          .top_director{
+            margin-top: 153%;
+          }
+          .head_top_director{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .head_main_news{
+              margin-top: 320%;
+          }
+          .more_new{
+              display: flex;
+              flex-wrap: wrap;
+              margin: auto;
+          }
+          .view_all{
+            display: none;
+          }
+          .top_movies_1{
+            margin: auto;
+          }
+          footer{
+            display: flex;
+            flex-wrap: wrap;
+              margin-top: 200%;
+          }
+          
+        }
