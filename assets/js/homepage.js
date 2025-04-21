@@ -14,4 +14,12 @@ controlItems.forEach(item => {
         = `translate(-${Number(e.target.attributes[0].value)*WIDTH}px)`;
     })
 })
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".container-collapse");
+    const toggleBtn = document.querySelector(".list-bar");
+
+    toggleBtn.addEventListener("click", function () {
+        menu.classList.toggle("active-nav-collapse");
+    });
+});
 
