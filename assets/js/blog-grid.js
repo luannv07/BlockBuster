@@ -110,5 +110,14 @@ function renderBlogGrid() {
 }
 //gọi hàm renderBlogGrid để hiển thị các bài viết trong blog
 renderBlogGrid();
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".container-collapse");
+    const toggleBtn = document.querySelector(".list-bar");
+
+    toggleBtn.addEventListener("click", function () {
+        menu.classList.toggle("active-nav-collapse");
+    });
+});
+
 
 
