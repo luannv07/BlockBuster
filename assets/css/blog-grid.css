@@ -12,7 +12,22 @@ body{
     font-family: 'Segoe UI';
     transition: all 0.3s ease-in-out;
 }
+.animated-element {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust initial offset as needed */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure the first row is always visible */
+.hang1:first-child .cot1 {
+    opacity: 1;
+    transform: translateY(0);
+}
 /*header, màu background được thu nhỏ theo chiều dài*/
 header {
     /*căn giữa menu*/
@@ -266,6 +281,7 @@ header {
     .thanh_tim_kiem:active{
         transform: translate3d(2px);
         box-shadow: 2px 2px 15px #e2ff05;
+        transition: all 0.05s ease-in-out;
     }
     .tag_of_categories{
         display: block;

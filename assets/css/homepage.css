@@ -1,36 +1,47 @@
-*{max-width: 100%}
+    *{max-width: 100%}
 
-div{
-    color: aliceblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.5s ease-out;
-}
-h2{
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 0px;
-}
-.main-wrapper {
-    background-color: #1E1E2F;
-    background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
-    url('../images/banner/banner.jpg');
-    background-image: url('../images/banner/banner.jpg');   
-    background-position: bottom;
-    background-size: cover;
-    padding: 30px; 
-    padding-top: 20px;
+    div{
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.5s ease-out;
+    }
+    h2{
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 0px;
+    }
+    .main-wrapper {
+        background-color: #1E1E2F;
+        background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)), 
+        url('../images/banner/banner.jpg');
+        background-image: url('../images/banner/banner.jpg');   
+        background-position: bottom;
+        background-size: cover;
+        padding: 30px; 
+        padding-top: 20px;
 
-}
-/* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
-/*điều chỉnh kích thước của thanh menu*/
-/*header, màu background được thu nhỏ theo chiều dài*/
-header{
-    /*căn giữa menu*/
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+    }
+    /* hiệu ứng animation*/
+    .animated-element {
+        opacity: 0;
+        transform: translateY(20px); /* Adjust initial offset as needed */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    /*hiệu ứng animation*/
+    .appear {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
+    /*điều chỉnh kích thước của thanh menu*/
+    /*header, màu background được thu nhỏ theo chiều dài*/
+    header{
+        /*căn giữa menu*/
+        left: 50%; 
+        transform: translateX(-50%); 
+        z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
   /*thêm hiệu ứng cho thanh login và sign-up*/
   .rounded-red-btn{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
@@ -53,15 +64,15 @@ header{
             background-color: transparent;
             height: 2000px;
           }
-.noi_dung_banner{
-    margin-top: 12%;
-    margin-left: 10%;
-    width: 165px;
-    height: 32px;
-    opacity: 0.8;
-    font-family: Segoe UI;
-    color: white;
-}
+    .noi_dung_banner{
+        margin-top: 12%;
+        margin-left: 10%;
+        width: 165px;
+        height: 32px;
+        opacity: 0.8;
+        font-family: Segoe UI;
+        color: white;
+    }
     .anh1 { background-image: url('../images/slider1.jpg'); background-size: cover; background-position: center; }
     .anh2 { background-image: url('../images/slider3.jpg'); background-size: cover; background-position: center; }
     .anh3 { background-image: url('../images/slider2.jpg'); background-size: cover; background-position: center; }
@@ -78,6 +89,7 @@ header{
         overflow: hidden;
         padding-top: 10px;
         background-color:#385873;
+        border-radius: 10px;
       }
     .slider{
         width: 100%;
@@ -593,7 +605,7 @@ color: #c6c2c2;
     }
     .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
         padding: 10%;
-        width: 30%;
+        width: 200px;
     }
     .rating_container{
         display: none;
@@ -649,7 +661,7 @@ color: #c6c2c2;
         flex-wrap: wrap;
     }
     .top_movies_anh1, .top_movies_anh2, .top_movies_anh3 {
-        width: 30%;
+        width: 200px;
     }
     .rating_container {
         display: none;
@@ -703,9 +715,13 @@ color: #c6c2c2;
               display: flex;
               flex-wrap: wrap;
           }
+          .top_movies_1{
+            display: none;
+          }
           .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
             display: block;
-              width: 100%;
+              width: 550px;
+              height: 300px;
               margin-top: 3px;
               margin-bottom: 3px;
          }

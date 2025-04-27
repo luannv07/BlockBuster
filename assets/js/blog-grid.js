@@ -105,19 +105,30 @@ function renderBlogGrid() {
         html += '</div>';
     }
     //chèn toàn bộ nội dung html vào trong phần tử có id là blogGrid
-    //sử dụng innerHTML để thay thế nội dung bên trong phần tử đó
     container.innerHTML = html;
 }
 //gọi hàm renderBlogGrid để hiển thị các bài viết trong blog
 renderBlogGrid();
-document.addEventListener("DOMContentLoaded", function () {
-    const menu = document.querySelector(".container-collapse");
-    const toggleBtn = document.querySelector(".list-bar");
 
-    toggleBtn.addEventListener("click", function () {
-        menu.classList.toggle("active-nav-collapse");
-    });
-});
+//hàm animation khi scroll chuột xuống
+function revealOnScroll() {
+    const animatedElements = document.querySelectorAll(".animated-element");
+
+    for (let i = 0; i < animatedElements.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = animatedElements[i].getBoundingClientRect().top;
+        const elementVisible = 70; // Di chuột khoảng cách bao nhiêu để xuất hiện/ biến mất
+
+        if (elementTop < windowHeight - elementVisible) {
+            animatedElements[i].classList.add("appear");
+        } else {
+            animatedElements[i].classList.remove("appear");
+        }
+    }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
 
 
 
