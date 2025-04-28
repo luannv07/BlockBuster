@@ -236,16 +236,24 @@ body {
     width: 82px;
     height: 32px;
     white-space: nowrap;
-    text-decoration: underline;
     color: #F6F6F6;
     margin-left: 479px;
+    margin-top: 8px;
     font-weight: bold;
+    text-decoration: underline;
 }
-.view_all:hover{
+.view_link{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+}
+.view_link:hover{
     color:#2d5aff;
     opacity: 1;
     cursor: pointer;
+    text-decoration: underline;
 }
+
 .top_movies_anh1,.top_movies_anh2,.top_movies_anh3{
     display: flex;
     width: 215px;
@@ -426,6 +434,7 @@ line2{
 .info2:hover{
     cursor: pointer;
     color: #FFE836;
+    transition: color 0.25s ease-in;
 }
 .info3{
     font-size: 16px;
