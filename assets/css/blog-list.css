@@ -24,19 +24,20 @@ body {
 .nav-wrapper {
   position: absolute;
   top: 29px;
-  left: 145px;
+  left: 100px;
   width: 1300px;
 }
 
 .custom-header-nav {
   height: 80px;
+  margin-top: 20px;
   background: white;
   border-radius: 47px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 124px;
-  gap: 86px;
+  gap: 90px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
@@ -113,6 +114,7 @@ option {
 }
 
 .blog-list li {
+  margin-left: -60px;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -314,8 +316,6 @@ img {
   display: flex;
 }
 
-/* Responsive styles for blog list page */
-/* Responsive Navigation: Vertical when small screen */
 @media (max-width: 1024px) {
   .nav-wrapper {
     left: 50%;
@@ -372,4 +372,69 @@ img {
   .pagination ul {
     flex-wrap: wrap;
   }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-title {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.blog-list li {
+  animation: slideUp 1.5s ease-in-out;
+  transition: border 0.7s ease, box-shadow 0.7s ease;
+}
+
+.blog-list li:hover {
+  border: 1px solid #ffe836;
+  box-shadow: 0 4px 10px rgba(255, 232, 54, 0.2);
+}
+
+.blog-list li div:first-child img {
+  transition: transform 0.7s ease;
+}
+
+.blog-list li:hover img {
+  transform: scale(1.1);
+}
+
+.blog-list li div h2 {
+  transition: color 0.5s ease;
+}
+
+.blog-list li:hover h2 {
+  color: #ffe836;
+}
+
+.sidebar,
+.pagination {
+  animation: fadeIn 1s ease;
+}
+
+.tag-list span {
+  transition: background-color 0.3s ease;
+}
+
+.tag-list span:hover {
+  background-color: #3d78b4;
+  color: #fff;
 }
