@@ -88,7 +88,7 @@ userFavoriteGrid.forEach((phim) => {
       <div style="color: white;">
         <h2 style="font-size: 18px; font-weight: bold; color: white; margin: 0 0 8px;">${phim.title}</h2>
         <span style="display: block; margin-bottom: 5px;">⭐${phim.rating}/10</span>
-        <p style="margin: 0 0 8px;">${phim.description}</p>
+        <p class="description" style="margin: 0 0 8px;">${phim.description}</p>
         <small style="opacity: .6;">${phim.release}</small>
         <div style="opacity: .8;">Run time: ${phim.runtime}</div>
         <hr style="margin: 8px 0;">

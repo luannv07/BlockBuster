@@ -60,7 +60,6 @@ body {
   width: var(--max-width-container);
   margin: auto;
   background-color: var(--background-color);
-  height: 8000px;
   padding: 20px;
 }
 
@@ -71,6 +70,7 @@ header {
   position: fixed;
   width: calc(var(--max-width-container) - 20px * 2);
   transition: .2s ease-out;
+  z-index: 9999;
 }
 
 header>* {
@@ -143,6 +143,10 @@ footer {
 }
 
 @media screen and (max-width: 1240px) {
+  header>ul {
+    display: none !important;
+  }
+
   .nav-only-md {
     display: block;
   }

@@ -23,8 +23,11 @@ body {
 
 .nav-wrapper {
   position: absolute;
-  top: 29px;
-  left: 100px;
+  /* top: 29px;
+  left: 100px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 1300px;
 }
 
@@ -373,11 +376,13 @@ img {
     flex-wrap: wrap;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -389,6 +394,7 @@ img {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
