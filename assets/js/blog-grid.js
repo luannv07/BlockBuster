@@ -221,7 +221,7 @@ const blogPosts = [
 // Hàm tạo 1 ô bài viết
 function createBlogCard(post, index) {
     return `
-    <div class="cot1">
+    <div class="cot1 animated-element">
         <div class="cot1_main" style="background-image: url('${post.image}');"></div>
         <div class="cot1_side">
             <div class="cot1_content1">${post.title}</div>
@@ -237,11 +237,12 @@ function renderBlogGrid() {
     //khởi tạo string rỗng
     let html = '';
     // Nhóm thành từng hàng (mỗi hàng 4 ô)
-    //tối đa 3 hàng, 4 cột
+    //tối đa n hàng, 4 cột
     for (let i = 0; i < blogPosts.length; i += 4) {
+        //thêm class= hang1( chỉnh sửa hang1 tại Css)
         html += '<div class="hang1">';
         const group = blogPosts.slice(i, i + 4);
-        // Tạo các ô bài viết trong hàng( 4 ô)
+        // Tạo các ô bài viết trong các hàng( 4 ô/ hàng)
         //vòng lặp forEach duyệt qua từng bài viết trong nhóm
         group.forEach((post, index) => {
             html += createBlogCard(post, index);
@@ -259,10 +260,14 @@ function revealOnScroll() {
     const animatedElements = document.querySelectorAll(".animated-element");
 
     for (let i = 0; i < animatedElements.length; i++) {
+        //tạo đối tượng chứa kích thước 100% width, height ban đầu của trang web
         const windowHeight = window.innerHeight;
+         // tạo đối tượng đo kích thước/ độ rộng của từng phần tử class/ ID: animated-element
         const elementTop = animatedElements[i].getBoundingClientRect().top;
-        const elementVisible = 70; // Di chuột khoảng cách bao nhiêu để xuất hiện/ biến mất
-
+        const elementVisible = 150; // Di chuột khoảng cách bao nhiêu để xuất hiện/ biến mất
+        //nếu scroll vào kích thước của elementTop
+        //tạo/ xóa class: appear bên trong thẻ class/ ID: animated-element trong HTML
+        //class: appear là đối tượng thực hiện animation
         if (elementTop < windowHeight - elementVisible) {
             animatedElements[i].classList.add("appear");
         } else {
@@ -270,9 +275,5 @@ function revealOnScroll() {
         }
     }
 }
-
 window.addEventListener("scroll", revealOnScroll);
-
-
-
-
+window.addEventListener("load", revealOnScroll);

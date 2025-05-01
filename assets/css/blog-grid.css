@@ -1,39 +1,42 @@
 * {
     max-width: 100%;
 }
-
 div {
     color: #FFFFFF;
     font-family: 'Segoe UI';
     transition: all 0.3s ease-in-out;
 }
-
 body {
     background-color: var(--background-color);
     color: #FFFFFF;
     font-family: 'Segoe UI';
     transition: all 0.3s ease-in-out;
 }
-
+/*animation cho toàn trang*/
 .animated-element {
-    opacity: 1;
-    transform: translateY(20px);
-    /* Adjust initial offset as needed */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
-
 .appear {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Ensure the first row is always visible */
+/*
 .hang1:first-child .cot1 {
     opacity: 1;
     transform: translateY(0);
 }
-
+*/
 /*header, màu background được thu nhỏ theo chiều dài*/
+header {
+    /*căn giữa menu*/
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    /* Đảm bảo menu nằm trên các phần tử khác */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
 /*nổi bật cho thanh sign-up và login*/
 .rounded-red-btn {
@@ -145,7 +148,6 @@ a {
 
 /*khu vực chính 70% chia làm 3 hàng- 4 cột*/
 .hang1
-
 /*.hang2,.hang3*/
     {
     width: 90%;
@@ -157,9 +159,9 @@ a {
 
 /*xét 12 ô trong khu vực 70% theo tỉ lệ 3x4*/
 .cot1
-
 /*,.cot2,.cot3,.cot4,.cot5,.cot6,.cot7,.cot8,.cot9,.cot10,.cot11,.cot12*/
     {
+    opacity: 0;
     width: 250px;
     height: 350px;
     margin-top: 1%;
@@ -167,9 +169,11 @@ a {
     margin-right: 5px;
     border: 2px solid black;
     border-radius: 5px;
+    overflow: hidden;
 }
 
-.cot1:hover,
+.cot1:hover
+/*
 .cot2:hover,
 .cot3:hover,
 .cot4:hover,
@@ -180,35 +184,21 @@ a {
 .cot9:hover,
 .cot10:hover,
 .cot11:hover,
-.cot12:hover {
+.cot12:hover*/ {
     border: 2px solid yellow;
     cursor: pointer;
     transition: border 0.3s;
 }
 
-.cot1_main,
+.cot1_main
+/*
 .cot2_main,
-.cot3_main,
-.cot4_main,
-.cot5_main,
-.cot6_main,
-.cot7_main,
-.cot8_main,
-.cot9_main,
-.cot10_main,
-.cot11_main,
-.cot12_main {
-    height: 50%;
-    background-color: #1183ee;
-}
-
-.cot1_main,
-.cot2_main,
-.cot3_main {
+.cot3_main*/ {
     background-image: url('../images/blog-it1.jpg');
 }
 
-.cot1_side,
+.cot1_side
+/*
 .cot2_side,
 .cot3_side,
 .cot4_side,
@@ -219,18 +209,34 @@ a {
 .cot9_side,
 .cot10_side,
 .cot11_side,
-.cot12_side {
+.cot12_side*/ {
     height: 50%;
     max-width: 100%;
 }
+/*animation cho các ô*/
+.cot1 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+}
 
+.cot1.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*căn chỉnh ảnh*/
 .cot1_main {
     background-size: cover;
     background-repeat: no-repeat;
     height: 200px;
 }
+.cot1_main:hover{
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
 
 /* giới hạn tối đa 3 dòng Hiển thị "..." khi bị tràn */
+/*Điều chỉnh 3 nội dung bên trong mỗi ô*/
 .cot1_content1 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -275,7 +281,6 @@ a {
     color: #408ed2;
 
 }
-
 .cot1_content1:hover {
     color: #FFE836;
 }
@@ -413,7 +418,7 @@ hr {
     height: 35px;
     margin: auto;
     margin-right: 44%;
-    margin-top: -4%;
+    margin-top: -1%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -518,7 +523,10 @@ footer {
     z-index: 1000;
     position: relative;
 }
-
+.container-flex{
+    padding-top: 10px;
+    margin-top: 200%;
+}
 .container {
     margin: auto;
     padding: 20px;
@@ -559,36 +567,41 @@ footer {
     .thanh4,
     .thanh5,
     .thanh6 {
-        width: 80%;
+        width: 80%; 
         margin: auto;
     }
-
+    .sang_trang {
+        margin: auto;
+        margin-top: -70%;
+        padding: auto;
+    }
     .row_search,
     .tag_of_categories,
     .tag_of_tag {
         margin: auto;
+        padding: auto;
     }
 
     .tag_of_tag {
+        margin: auto;
+        padding: auto;
         display: flex;
         justify-content: center;
+        padding-bottom: 10%;
     }
-
-    .sang_trang {
-        margin: auto;
-    }
-
     #search-box {
         margin: auto;
         margin-left: 39%;
     }
 
     footer {
-        /* margin-top: 100%; */
+        /*margin-top: 300%;*/
+        padding: 100px;
+        display: none !important;
     }
 }
 
-@media screen and (min-width: 891px) and (max-width: 1300px) {
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
     * {
         max-width: 100%;
     }
@@ -626,7 +639,10 @@ footer {
         width: 80%;
         margin: auto;
     }
-
+    .sang_trang {
+        margin: auto;
+        margin-top: -70%;
+    }
     .row_search,
     .tag_of_categories,
     .tag_of_tag {
@@ -636,15 +652,11 @@ footer {
     .tag_of_tag {
         display: flex;
         justify-content: center;
+        padding-bottom: 10%;
     }
-
-    .sang_trang {
-        margin: auto;
-    }
-
     #search-box {
         margin: auto;
-        margin-left: 39%;
+        margin-left: 49%;
     }
 
     footer {
@@ -652,7 +664,7 @@ footer {
     }
 }
 
-@media screen and (max-width:890px) {
+@media screen and (max-width:1099px) {
     .hang1 {
         display: flex;
         /* Chuyển từ flex sang block để mỗi bài viết xuống dòng */
@@ -708,16 +720,14 @@ footer {
     .tag_of_tag {
         margin: auto;
     }
-
-    .tag_of_tag {
-        display: flex;
-        justify-content: center;
-    }
-
     .sang_trang {
         display: none;
     }
-
+    .tag_of_tag {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15%;
+    }
     #search-box {
         margin: auto;
         margin-left: 39%;
