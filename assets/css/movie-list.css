@@ -347,31 +347,31 @@ img {
 }
 
 .movie-list li.active-animation .movie-content-box a h2 {
-  animation-duration: .5s;
+  animation-duration: .25s;
 }
 
 .movie-list li.active-animation .movie-content-box span {
-  animation-duration: .75s;
+  animation-duration: .5s;
   display: block;
 }
 
 .movie-list li.active-animation .movie-content-box p {
-  animation-duration: .95s;
+  animation-duration: .75s;
 }
 
 .movie-list li.active-animation .movie-content-box small {
-  animation-duration: 1s;
+  animation-duration: .75s;
   display: block;
 }
 
 .movie-list li.active-animation .movie-content-box div {
-  animation-duration: 1.25s;
+  animation-duration: .75s;
 }
 
 .movie-list li.active-animation div a img {
   animation-name: showAndMoveYR;
   animation-timing-function: ease-in-out;
-  animation-duration: .5s;
+  animation-duration: .7s;
 }
 
 .commons {
