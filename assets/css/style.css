@@ -34,6 +34,7 @@ a {
   --background-color: #020D18;
   --background-color-smaller: #08294A;
   --red-color: #DD003F;
+  --yellow-color: #FFE836;
 }
 
 html,
@@ -70,7 +71,7 @@ header {
   position: fixed;
   width: calc(var(--max-width-container) - 20px * 2);
   transition: .2s ease-out;
-  z-index: 9999;
+  z-index: 1;
 }
 
 header>* {
@@ -157,10 +158,6 @@ footer {
     background-color: initial;
   }
 
-  header>ul {
-    display: none;
-  }
-
   .nav-only-md ul {
     background-color: white;
   }
@@ -208,10 +205,65 @@ footer {
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .active-nav-collapse {
     transform: scaleY(1);
+  }
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background-color: var(--background-color);
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeOut 0.2s 0.5s forwards;
+  z-index: 99999;
+}
+
+
+.loading-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: rotate linear infinite;
+  transform: translate(-50%, -50%) rotate(0);
+}
+
+#loading-circle-1 {
+  width: 100px;
+  height: 100px;
+  border-top-color: var(--red-color);
+  border-bottom-color: var(--red-color);
+  animation-duration: 1s;
+}
+
+#loading-circle-2 {
+  width: 120px;
+  height: 120px;
+  border-right-color: var(--yellow-color);
+  border-left-color: var(--yellow-color);
+  animation-direction: reverse;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

@@ -46,6 +46,7 @@ body {
 .breadcumb h1,
 .breadcumb p {
   animation: showAndMoveY ease-out;
+  animation-delay: .25s;
 }
 
 .breadcumb h1 {
@@ -112,6 +113,7 @@ body {
 /* responsive */
 .box-movie * {
   border-radius: 10px;
+  animation-delay: .25s;
   animation: showAndMoveY 0.5s ease-out;
 }
 
@@ -133,11 +135,13 @@ body {
   color: white;
   background-color: var(--red-color);
   font-weight: bold;
+  animation-delay: .25s;
   animation: zoomOut 0.25s ease-out;
 }
 
 .btn-buy-ticket {
   font-weight: bold;
+  animation-delay: .25s;
   animation: zoomOut 0.5s ease-out;
 }
 
@@ -384,11 +388,13 @@ body {
 }
 
 .movie-details-details-content-page {
+  animation-delay: .25s;
   animation: showAndMoveYR 0.5s ease-out;
 }
 
 .movie-details-actions-favorite,
 .movie-details-actions-share {
+  animation-delay: .25s;
   animation: showAndMoveX ease-out;
 }
 
@@ -401,6 +407,7 @@ body {
 }
 
 .movie-details-title {
+  animation-delay: .25s;
   animation: showAndMoveXR 0.5s ease-out;
 }
 

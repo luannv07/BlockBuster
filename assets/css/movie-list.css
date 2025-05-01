@@ -125,6 +125,10 @@ option {
   flex: 8;
 }
 
+.movie-list li div:first-child a {
+  position: relative;
+}
+
 .movie-list li div h2 {
   padding: 15px 0;
 }
@@ -135,11 +139,7 @@ option {
 
 
 .movie-list li:hover {
-  border: 1px solid #FFE836;
-}
-
-.movie-list li:hover img {
-  transform: scale(1.1);
+  border-color: #FFE836;
 }
 
 .movie-list li:hover h2 {
@@ -254,9 +254,23 @@ img {
 }
 
 /* mobile: < 768, ipad: >= 768 && < 991, laptop: >=992  */
+@media screen and (max-width: 768px) {
+  .movie-list li {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .section-body {
     display: block;
+  }
+
+  .movie-list li div:first-child {
+    flex: 5;
+  }
+
+  .movie-list li div:last-child {
+    flex: 5;
   }
 
   * {
@@ -269,6 +283,10 @@ img {
 }
 
 @media screen and (max-width: 1366px) {
+  .section-body {
+    gap: 20px;
+  }
+
   .movie-list li div:first-child {
     flex: 3;
   }
@@ -291,6 +309,10 @@ img {
     flex: 3;
   }
 
+  .section-body {
+    gap: 20px;
+  }
+
   .movie-list li div:last-child {
     flex: 7;
   }
@@ -309,6 +331,7 @@ img {
 
 .breadcumb * {
   animation: showAndMoveY ease;
+  animation-delay: 0.4s;
 }
 
 .breadcumb h1 {
@@ -412,4 +435,8 @@ img {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.movie-list li {
+  min-height: 100%;
 }
