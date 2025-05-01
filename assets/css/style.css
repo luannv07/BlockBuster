@@ -66,12 +66,14 @@ body {
 
 header {
   background-color: #fffafa;
-  border-radius: 10000px;
   padding: 30px;
   position: fixed;
-  width: calc(var(--max-width-container) - 20px * 2);
+  width: 100%;
   transition: .2s ease-out;
   z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header>* {
@@ -113,6 +115,19 @@ header>ul li a:hover {
   opacity: .8;
 }
 
+.rounded-yellow-btn {
+  background-color: var(--yellow-color);
+  padding: 10px 30px;
+  color: #000;
+  text-align: center;
+  border-radius: 10000px;
+}
+
+.rounded-yellow-btn:hover {
+  color: #000;
+  opacity: .8;
+}
+
 .header-nav-sub {
   display: flex;
   align-items: center;
@@ -136,16 +151,31 @@ footer {
 }
 
 .tiny {
-  padding: 15px !important;
+  padding: 20px 0px !important;
 }
 
 .nav-only-md {
   display: none;
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1320px) and (min-width: 992px) {
+
+  header * {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .container {
+    width: calc(var(--max-width-container) + 20%);
+  }
+
+  header {}
+
+}
+
+@media screen and (max-width: 991px) {
   header>ul {
-    display: none !important;
+    display: none;
   }
 
   .nav-only-md {
@@ -153,64 +183,122 @@ footer {
   }
 
   header {
+    padding: 0;
     border-radius: 0;
+    background-color: var(--background-color);
     padding: 10px;
-    background-color: initial;
-  }
-
-  .nav-only-md ul {
-    background-color: white;
-  }
-
-  .nav-only-md ul li a {
-    display: block;
-    padding: 8px 10px;
-    margin-top: 2px;
-    font-weight: 500;
-  }
-
-  .active-link {
-    background-color: inherit !important;
-  }
-
-  .nav-only-md ul li a:hover {
-    background-color: var(--red-color);
-    color: white;
+    box-shadow: 0 1px 10px 1px #686868;
   }
 
   .list-bar {
-    border: 2px solid rgb(255, 255, 255);
+    display: flex !important;
+    gap: 5px;
+    flex-direction: column;
     cursor: pointer;
-    background-color: transparent;
-    transition: 0.15s ease;
-    display: inline-block;
-  }
-
-  .list-bar div {
-    width: 30px;
-    height: 4px;
-    background-color: rgb(255, 255, 255);
-    margin: 5px;
+    padding: 10px;
+    border: 2px solid #fff;
   }
 
   .list-bar:hover {
     opacity: .8;
   }
 
-  .nav-only-md ul li:last-child a {
-    border-radius: 0;
+  .list-bar div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+  }
+
+  .nav-md-visible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-md-visible .logo {
+    padding: 10px 15px;
+    font-weight: 500;
+  }
+
+  .nav-md-visible .logo {
+    color: var(--red-color);
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .nav-md-visible .logo:hover {
+    color: var(--red-color);
+  }
+
+  .overlay {
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    overflow: hidden;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
   }
 
   .container-collapse {
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s ease-out;
+    position: fixed;
+    background-color: #fafafa;
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    width: 40%;
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
+    z-index: 4;
   }
 
-  .active-nav-collapse {
-    transform: scaleY(1);
+  .container-collapse.active-nav-md-menu+.overlay {
+    visibility: visible;
+    opacity: .5;
+  }
+
+  .container-collapse.active-nav-md-menu {
+    left: 0px;
+  }
+
+  .container-collapse li a {
+    padding: 10px;
+    display: block;
+    margin: 5px;
+    border-radius: 10000px;
+    text-align: start;
+    font-weight: 500;
+    border-bottom: 2px solid var(--red-color);
+  }
+
+  .container-collapse li a:not(.active-link):not(.rounded-yellow-btn):not(.rounded-red-btn):hover {
+    /* background-color: var(--red-color); */
+    color: var(--red-color);
+    opacity: .8;
+  }
+
+  .active-nav-md-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .container-collapse {
+    width: 70%;
+  }
+
+  .breadcumb {
+    margin: 20% auto 10% !important;
   }
 }
 
@@ -265,6 +353,16 @@ footer {
     opacity: 0;
     visibility: hidden;
   }
+}
+
+.logo {
+  color: #fff;
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
+
+.logo:hover {
+  color: #fff;
 }
 
 /* css chung */
