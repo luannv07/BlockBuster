@@ -16,7 +16,7 @@ body {
 .animated-element {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
 }
 .appear {
     opacity: 1;
@@ -33,8 +33,8 @@ header {
     /*căn giữa menu*/
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
     /* Đảm bảo menu nằm trên các phần tử khác */
+    z-index: 1000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
