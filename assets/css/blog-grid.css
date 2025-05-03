@@ -22,47 +22,18 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-/*
-.hang1:first-child .cot1 {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/
-/*header, màu background được thu nhỏ theo chiều dài*/
-header {
-    /*căn giữa menu*/
-    left: 50%;
-    transform: translateX(-50%);
-    /* Đảm bảo menu nằm trên các phần tử khác */
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 /*nổi bật cho thanh sign-up và login*/
 .rounded-red-btn {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
     transition: box-shadow 0.25s ease-in-out;
 }
-
 .rounded-red-btn:hover {
     box-shadow: 0px 0px 15px rgba(20, 17, 17, 0.8);
     transition: box-shadow 0.3s ease-in-out;
 }
-
-.login_side {
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
-    transition: box-shadow 0.25s ease-in-out;
-}
-
-/*chữ nổi dần dần khi được di chuột vào*/
-.login_side:hover {
-    font-weight: bolder;
-    transition: font-weight 0.3s ease-in-out;
-}
-
 /*background hình lửa trại bên trong header*/
-
 .main-wrapper {
+    /*trộn 2 loại background với nhau(trộn ảnh và màu)*/
     background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)),
         url('../images/banner/banner.jpg');
     background-position: center;
@@ -72,7 +43,6 @@ header {
     width: 100%;
     height: 450px;
 }
-
 /* thẻ banner*/
 .banner {
     width: 255px;
@@ -86,7 +56,6 @@ header {
     margin-top: 12%;
     color: #FFFFFF;
 }
-
 /*Hiển thị trang hiện tại đang truy cập*/
 .banner_main {
     font-size: 48px;
