@@ -90,18 +90,30 @@
         </p>
       </div>
       <div class="section-body">
-        <div class="left-box flex-3">
+        <div class="left-box">
           <div class="box-movie">
             <div class="card-img">
               <img src="../assets/images/movie-details/skyfall.jpg" alt="skyfall" width="100%">
             </div>
             <div class="card-movie-button">
-              <button class="btn btn-watch-trailer">Watch</button>
+              <button class="btn btn-watch-trailer" onclick="toggleMovieTrailer()">Watch</button>
               <button class="btn btn-buy-ticket">Buy</button>
             </div>
           </div>
+          <div class="movie-trailer">
+            <div class="overlay" onclick="toggleMovieTrailer()"></div>
+            <div class="movie-trailer-content">
+              <button class="close-btn" onclick="toggleMovieTrailer()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg></button>
+              <video controls autoplay src="../assets/videos/movie-trailer.mp4"></video>
+            </div>
+          </div>
         </div>
-        <div class="right-box flex-10">
+        <div class="right-box">
           <h2 class="movie-details-title">
             Skyfall: Quantum of Spectre
             <span>2015</span>
@@ -172,7 +184,7 @@
             <ul class="movie-details-details-content">
               <li
                 class="active-tab-movie-details movie-details-details-content-page movie-details-details-content-page1">
-                <div class="left flex-6">
+                <div class="left">
                   <p style="font-size: 16px;">Tony Stark, driven by his desire to protect humanity from future threats,
                     initiates the Ultron
                     Program—a powerful artificial intelligence designed to serve as a global peacekeeping force. His
@@ -253,11 +265,16 @@
                         </div>
                         <div>... Ultron </div>
                       </div>
-                      <div style="text-align: center;margin: auto;">...</div>
                     </div>
+                    <div style="text-align: center;margin: auto;">...</div>
+
                   </div>
                 </div>
                 <div class="right flex-2">
+                  <div class="movie-details-details-content-top">
+                    <div style="font-size: 16px;font-weight: 500;">Details</div>
+                  </div>
+                  <hr style="margin: 10px 0;">
                   <div style="padding: 0 0 20px 0;">
                     <p>Release Date:</p>
                     <span style="opacity: .8;">
@@ -616,8 +633,38 @@
           </div>
         </div>
       </div>
-    </div>
 
+      <div class="section-more">
+        <div class="movie-details-details-content-top">
+          <div
+            style="font-size: 24px;font-weight: 500; padding: 10px 0px; display: block; background-color: transparent;">
+            Related movies</div>
+          <div class="details-right-box">
+            <a href="../pages/movie-list.html">View all movies</a>
+            <div class="slider-controls">
+              <div class="controls-left" onclick="transSlider('left')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+              </div>
+              <div class="controls-right" onclick="transSlider('right')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="movie-details-details-content-content-slider" style="margin-top: 10px;">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
     <footer class="container-flex">
       <p>Nhóm sinh viên thực hiện (D18CNPM4): Nguyễn Văn Luận, Nguyễn Đình Duy, Nguyễn Trọng An</p>
     </footer>
