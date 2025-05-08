@@ -1,0 +1,136 @@
+footer{
+    margin-top: 742px; 
+    padding-left: 0;
+    padding-right: 0;
+}
+ /* làm mờ toàn bộ trang web bằng cách đè z-index lên trên*/
+ .login-form{
+ position: fixed;
+ top: 0; left: 0;
+ /*khu vực làm mờ chiếm 100% màn hình*/
+ width: 100%;
+ height: 100%;
+ /*làm mờ để nổi bật khung Login/ sign-up*/
+ }
+ /* tạo 2 khung login/ sign-up được đặt ở giữa màn hình */
+ .login-box{
+ background-color: #1e1e1e;
+ padding: 2rem;
+ border-radius: 8px;
+ width: 350px;
+ height: fit-content;
+ color: white;
+ position: relative;
+ top: 30%;
+ left: 40%;
+ }
+ .login-box,.animated-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.25s ease-out, transform 1s ease-out;
+}
+
+/* hiệu ứng animation*/
+ .animated-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+div {
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 1.5s ease-out;
+}
+ /* căn giữa tiêu đề */
+ .login-box h2{
+ margin-bottom: 1rem;
+ text-align: center;
+ }
+ /*các thanh Input cách đều nhau */
+ .login-box input {
+ width: 100%;
+ padding: 10px;
+ /*2 thanh cách nhau 8px(top- bottom), 0px(left-right) */
+ margin-top: 8px;
+ margin-bottom: 8px;
+ /*bằng cách nào đó nó đã ẩn đi viền top-left của thẻ input*/
+ background-color: #333;
+ color: white;
+ border-radius: 4px;
+ }
+ /*nổi bật thanh input khi nhấp chuột vào*/
+ .login-box input:focus {
+    background-color: #444;
+    border-color: #e50914;
+    box-shadow: 0 0 8px #e50914;
+    /*tránh 2 màu nền trắng( mặc định), đỏ bị chèn lẫn nhau*/
+    outline: none;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+ /* button Submit bên trong login-box/signup-box */
+ .login-box button{
+ width: 100%;
+ padding: 10px;
+ background-color: #e50914;
+ color: white;
+ font-size: 16px;
+ border-radius: 4px;
+ margin-top: 12px;
+ cursor: pointer;
+ font-weight: bold;
+ }
+ /* Hover button */
+ .login-box button:hover {
+ background:linear-gradient(to right, blue,orange);
+ color: rgb(0, 255, 179);
+ transform: scale(1.05);
+ transition: all 0.5s ease-in-out;
+ }
+ .login-box button:focus{
+ background:linear-gradient(to right, blue,orange);
+ color: rgb(0, 255, 179);
+ transition: all 0.5s ease-in-out;
+ }
+ /*khu vực ghi nhớ tên đăng nhập*/
+ input[type="checkbox"] {
+     margin-left: 3px;
+     margin-right: 7px;
+     transform: scale(1.2);
+     cursor: pointer;
+     width: fit-content;
+ }
+ .on_off{
+    width: 1.7%;
+    height: 2.8%;
+    font-size: 20px;
+    position: fixed;
+    margin-top: -12.5%;
+    margin-left: 71.5%;
+    cursor: pointer;
+ }
+ .move_to_sign-up{
+    color: red;
+    text-decoration: underline;
+ }
+ .move_to_sign-up:hover{
+    color: rgb(118, 118, 255);
+    transition: color 0.3s ease-in-out;
+ }
+ .forgot_password{
+    margin-top: 3px;
+ }
+.forgot_link {
+    color: #ff6f61;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.forgot_link:hover {
+    color: rgb(118, 118, 255);
+}

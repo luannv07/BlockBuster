@@ -1,49 +1,3 @@
-git checkout duy : chuyển sang nhánh duy
-git checkout main : chuyển sang nhánh main
-* Sau khi code xong:
-git add . :chuyển vào mục sẵn sàng push lên branch duy
-git commit -m "tên commit" :chuyển các file ở trong mục sẵn sàng để push lên repository trên GitHub( tại nhánh branch duy)
-git push : chính thức đưa thư mục đã chỉnh sửa vào repository trên GitHub( tại nhánh branch duy)
-
-/* Sửa chữa glitch để header nằm trên tất cả các thanh nội dung khác*/
-
-header {
-
-    width: calc(var(--max-width-container) - 40px);
-    /*căn giữa menu*/
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-/*Thêm hiệu ứng nổi bật ho nút sign-up và login*/
-.rounded-red-btn{
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
-    transition: box-shadow 0.25s ease-in-out;
-  }
-    .rounded-red-btn:hover{
-        box-shadow: 0px 0px 15px rgba(20, 17, 17, 0.8);
-        transition: box-shadow 0.3s ease-in-out;
-    }
-    .login_side{
-    	box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
-    	transition: box-shadow 0.25s ease-in-out;
-	}
-    .login_side:hover{
-        font-weight: bolder;
-        transition: font-weight 0.3s ease-in-out;
-    }
-
-
-/*do đặt ":root" không bao phủ toàn bộ màn hình, tôi đã điều chỉnh 1 chút*/
-
-:root {
-    --max-width-container: 100%;
-    --max-width-header: 100%;
-    --max-width-content: 100%;
-    --max-width-footer: 100%;
-}
-/*style chung*/
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,14 +27,14 @@ header {
                                     logo
                                 </a>
                             </li>
-                            <li><a class="active-link" href="index.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="pages/movie-list.html">Movie list</a></li>
                             <li><a href="pages/blog-list.html">blog list</a></li>
                             <li><a href="pages/blog-grid.html">blog grid</a></li>
                             <li><a href="pages/user-favorite-grid.html">user favorite grid</a></li>
                         </div>
                         <div class="header-nav-sub">
-                            <li><a href="login.html">login</a></li>
+                            <li><a class="active-link"  href="login.html">login</a></li>
                             <li><a class="rounded-red-btn" href="sign_up.html">sign up</a></li>
                         </div>
                     </ul>
@@ -125,16 +79,39 @@ header {
         
                     </div>
                 </header>
-        
-               
+            <!--khu vực Login-->
+        <div class="login-form" id="login-form">
+            <div class="login-box animated-element">
+            <h2>Đăng nhập</h2>
+            <!--trả về Error nếu ô nhập trống sau khi Submit(required)-->
+            <form>
+                <label for="username"></label>
+                <input type="text" placeholder="Tên đăng nhập" required>
+                <input type="password" class="password" placeholder="Mật khẩu" required>
+                <!--click chuột vào để hàm change() chạy-->
+                <span class="on_off animated-element" onclick="change()">
+                🔐
+                </span>  
+                <input type="checkbox" class="animated-element" onclick="rememberUsername(this)"> Ghi nhớ tên đăng nhập
+                <button type="submit">Đăng nhập</button>
+            </form>
+            <br>
+            <div class="login-footer">
+                <span>Chưa có tài khoản? <a class="move_to_sign-up" href="sign_up.html">Đăng ký ngay</a></span>
             </div>
-        </div><!--Viết bên trong khu vực main/ thân trang web-->
+            <div class="forgot_password"></div>
+                <span><a class="forgot_link" href="#">Quên mật khẩu?</a></span>
+            </div>
+        </div>
+        </div>
+    </div><!--Viết bên trong khu vực main/ thân trang web-->
         <footer class="container-flex">
             <p>Nhóm sinh viên thực hiện (D18CNPM4): Nguyễn Văn Luận, Nguyễn Đình Duy, Nguyễn Trọng An</p>
         </footer>
     </div>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/homepage.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>
