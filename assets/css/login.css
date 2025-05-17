@@ -4,7 +4,6 @@ footer {
     padding-right: 0;
 }
 
-/* làm mờ toàn bộ trang web bằng cách đè z-index lên trên*/
 .login-form {
     position: fixed;
     top: 0;
@@ -16,51 +15,49 @@ footer {
 }
 
 /* tạo 2 khung login/ sign-up được đặt ở giữa màn hình */
-.login-box {
+ .login-box{
     background-color: #1e1e1e;
     padding: 2rem;
     border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25), /*bóng ngoài mờ 16px ở top-bottom*/
+                                                        /*áp dụng bóng mờ 6px ở top-bottom*/
+                0 12px 32px rgba(255, 255, 255, 0.2), /*bóng ngoài của bóng ngoài*/
+                inset 0 3px 6px rgba(255, 255, 255, 0.1); /*bóng bên trong viền inset*/
     width: 350px;
     height: fit-content;
     color: white;
     position: relative;
     top: 30%;
-    left: 40%;
-}
-
-.login-box,
-.animated-element {
+    left: 39%;
+ }
+.login-box,.animated-element {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1.25s ease-out, transform 1s ease-out;
 }
 
 /* hiệu ứng animation*/
-.animated-element {
+ .animated-element {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 1s ease-out;
 }
-
 .appear {
     opacity: 1;
     transform: translateY(0);
 }
-
 div {
     color: aliceblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 1.5s ease-out;
 }
-
-/* căn giữa tiêu đề */
-.login-box h2 {
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-/*các thanh Input cách đều nhau */
-.login-box input {
+ /* căn giữa tiêu đề */
+ .login-box h2{
+ margin-bottom: 1rem;
+ text-align: center;
+ }
+ /*các thanh Input cách đều nhau */
+ .login-box input {
     width: 100%;
     padding: 10px;
     /*2 thanh cách nhau 8px(top- bottom), 0px(left-right) */
@@ -70,10 +67,10 @@ div {
     background-color: #333;
     color: white;
     border-radius: 4px;
-}
-
-/*nổi bật thanh input khi nhấp chuột vào*/
-.login-box input:focus {
+    font-weight: 500;
+ }
+ /*nổi bật thanh input khi nhấp chuột vào*/
+ .login-box input:focus {
     background-color: #444;
     border-color: #e50914;
     box-shadow: 0 0 8px #e50914;
@@ -82,34 +79,36 @@ div {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
-
 /* button Submit bên trong login-box/signup-box */
 .login-box button {
     width: 100%;
     padding: 10px;
-    background-color: #e50914;
+    background-color: red !important; /* ép chèn màu đỏ */
+    background: linear-gradient(to right, blue, orange);
+    background-repeat: no-repeat;
+    /*ẩn màu background linear-gradient, giữ lại màu  red (!important)*/
+    background-size: 0% 100%;
+    background-position-x: right;
     color: white;
     font-size: 16px;
     border-radius: 4px;
     margin-top: 12px;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-size 500ms, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Hover button */
-.login-box button:hover {
-    background: linear-gradient(to right, blue, orange);
+.login-box button:hover,
+.login-box button:focus {
+    /* màu nền đỏ bị đè lên bởi linear-gradient sau khi ko bị ẩn nữa  */
+    background-size: 100% 100%;
+    background-position-x: left;
     color: rgb(0, 255, 179);
     transform: scale(1.05);
-    transition: all 0.5s ease-in-out;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-
-.login-box button:focus {
-    background: linear-gradient(to right, blue, orange);
-    color: rgb(0, 255, 179);
-    transition: all 0.5s ease-in-out;
-}
-
 /*khu vực ghi nhớ tên đăng nhập*/
 input[type="checkbox"] {
     margin-left: 3px;
