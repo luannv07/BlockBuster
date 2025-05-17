@@ -1316,7 +1316,7 @@ const validateSignUpForm = () => {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
 
   alert("Đăng kí thành công, chuyển sang đăng nhập.");
-  window.location = "../login.html";
+  window.location = "login.html";
 }
 const loginForm = () => {
   const form = document.getElementById("login");
