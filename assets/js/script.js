@@ -1340,7 +1340,7 @@ const loginForm = () => {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
       ch = false;
       alert("Login thành công, chuyển sang trang chủ.");
-      window.location = "../index.html";
+      window.location = "index.html";
     }
   }
   if (ch) alert("Tài khoản hoặc mật khẩu không hợp lệ.");
@@ -1355,7 +1355,7 @@ const checkStateAuthentication = () => {
   }
   if (storage.IS_AUTHENTICATED && (window.location.href.includes("login") || window.location.href.includes("sign_up"))) {
     alert("Không thể truy cập khi đã đăng nhập");
-    window.location = "../index.html";
+    window.location = "index.html";
   }
   // chinh header, neu login thi bo 2 nut login/signup di, thay vao do la nut logout va cau xin chao
   const authGroupBtnMd = document.querySelector(".auth-group-btn");
@@ -1372,5 +1372,6 @@ const logoutAccount = () => {
   storage.CURRENT_USER = null;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
   alert("Đăng xuất thành công, chuyển sang trang chủ.");
-  window.location = "../index.html";
+  window.location = "index.html";
 }
+// hiện tại thằng window.location đang trỏ sai nếu mở bằng liveServer hoặc github Page, chỉ chạy bằng file:///
