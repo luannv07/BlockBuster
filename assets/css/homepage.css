@@ -854,6 +854,16 @@
             display: block;
             margin-top: 50%;
         }
+        .slider {
+            display: flex;
+            height: 510px;
+          }
+          .item {
+              /* Mỗi item chiếm 80% chiều rộng, có thể thấy các item kế bên */
+            width: 70.5%;
+            height: 500px;
+            /* Ngăn item bị thu nhỏ */
+          }
     }
 
     @media screen and (max-width: 890px) {
@@ -875,10 +885,6 @@
 
         .danh_gia {
             display: none;
-        }
-
-        .item {
-            width: 50%;
         }
 
         .top_movies_banner {
@@ -937,5 +943,17 @@
             flex-wrap: wrap;
             margin-top: 200%;
         }
-
+        .slider {
+            display: flex;
+            height: 510px;
+          }
+          .item {
+              /* Mỗi item chiếm 80% chiều rộng, có thể thấy các item kế bên */
+            width: 40.5%;
+            height: 500px;
+            /* Ngăn item bị thu nhỏ */
+            /* Đảm bảo ảnh không bị kéo dãn */
+            flex-shrink: 0; 
+            /*snap 2 ảnh khi nhấn nút control*/
+          }
     }

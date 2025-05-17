@@ -1,15 +1,18 @@
-
 const container = document.querySelector(".banner .slider");
 const controlItems = document.querySelectorAll(".control-item");
-
-
+/*có tối đa 3 nút controlItems*/
+/*click 1/3 nút sẽ phát động sự kiên*/
 controlItems.forEach(item => {
     item.addEventListener("click", (e) => {
+        /*Đây là một arrow function được gọi khi sự kiện "click", (e) là đối tượng sự kiện (MouseEvent).*/
+        /*đo kích thước chiều rộng của từng slider*/
         const WIDTH = document.querySelectorAll(".item")[0].clientWidth;
         console.log(e);
+        /*active có tác dụng nổi bật cho 1/3 nút trong cùng 1 lúc*/
         const active = document.querySelector(".active");
         active.classList.remove("active");
         e.target.classList.add("active");
+        /*dịch chuyển các slider với chính xác kích thước 1 slider*/
         container.style.transform
             = `translate(-${Number(e.target.attributes[0].value) * WIDTH}px)`;
     })
@@ -34,6 +37,5 @@ function revealOnScroll() {
         }
     }
 }
-
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);

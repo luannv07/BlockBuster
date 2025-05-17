@@ -1,8 +1,7 @@
 footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    margin-top: 742px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* làm mờ toàn bộ trang web bằng cách đè z-index lên trên*/
@@ -78,7 +77,7 @@ div {
     background-color: #444;
     border-color: #e50914;
     box-shadow: 0 0 8px #e50914;
-    /*tránh 2 màu nền trắng( mặc định), đỏ bị chèn lẫn nhau*/
+    /*tránh 2 màu border trắng( mặc định), đỏ bị chèn lẫn nhau*/
     outline: none;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
@@ -153,4 +152,38 @@ input[type="checkbox"] {
 
 .forgot_link:hover {
     color: rgb(118, 118, 255);
+}
+
+/*responsive cho khung login*/
+@media screen and (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        left: 5%;
+        top: 20%;
+        padding: 1.5rem;
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-box button {
+        padding: 12px;
+    }
+
+    .login-box input {
+        padding: 12px;
+    }
+
+    .on_off {
+        width: 3%;
+        height: 4%;
+        font-size: 24px;
+        margin-top: -10.5%;
+        margin-left: 79.5%;
+    }
+
+    .move_to_sign-up {
+        font-size: 14px;
+    }
 }
