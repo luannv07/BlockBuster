@@ -109,7 +109,7 @@ const renderMovieList = (moviesList) => {
 document.addEventListener("DOMContentLoaded", () => {
   moviesList = sortedArray(moviesList, "rating", "asc");
   renderMovieList(moviesList);
-  document.querySelector(".founded-movies").innerHTML = "Founded: " + data.length + " movies";
+  document.querySelector(".founded-movies").innerHTML = data.length + " movies";
 
   const rightBoxForm = document.querySelector(".right-box form");
   rightBoxForm.addEventListener("submit", (e) => filterMoviesByOptions(e));
@@ -156,7 +156,7 @@ const filterMoviesByOptions = e => {
   });
   moviesList = filtered;
   currentPage = 1;
-  document.querySelector(".founded-movies").innerHTML = "Founded: " + moviesList.length + " movies";
+  document.querySelector(".founded-movies").innerHTML = moviesList.length + " movies";
   renderMovieList(moviesList);
   handleToggleAnimation();
 }

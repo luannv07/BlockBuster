@@ -1236,8 +1236,6 @@ const minActiveHeader = 400;
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
-  const activeNavBtn = document.querySelector(".nav-only-md .list-bar")
-
 
   document.addEventListener("scroll", () => setTinyHeader(window.scrollY, window.innerWidth, header));
 
@@ -1245,10 +1243,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentWidth = window.innerWidth;
     console.log("Window Width:", currentWidth);
   });
+
+  // authentication
+  initAuthStorage();
+  appearSavedUsername();
+  checkStateAuthentication();
 });
 const setTinyHeader = (yAxis, wScreen, element) => {
-  // console.log(yAxis + " " + wScreen);  
-
   if (yAxis > minActiveHeader && wScreen >= 992)
     element.classList.add("tiny");
   else
@@ -1258,4 +1259,118 @@ const setTinyHeader = (yAxis, wScreen, element) => {
 const activeNavMd = () => {
   const containerCollapse = document.querySelector(".container-collapse");
   containerCollapse.classList.toggle("active-nav-md-menu")
+}
+
+// authentication
+const DEFAULT_ACCOUNTS = [
+  {
+    username: "luan",
+    password: "123",
+    email: "abc@gmail.com"
+  }, {
+    username: "admin",
+    password: "123",
+    email: "test@gmail.com"
+  }
+];
+const STORAGE_VALUES = {
+  IS_AUTHENTICATED: false,
+  ACCOUNTS: DEFAULT_ACCOUNTS,
+  CURRENT_USER: null,
+  SAVED_USERNAME: null
+};
+const STORAGE_KEY = "auth2";
+const initAuthStorage = () => {
+  if (!window.localStorage.getItem(STORAGE_KEY))
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(STORAGE_VALUES));
+}
+const appearSavedUsername = () => {
+  const input = document.querySelector("#login input[type='text']");
+  if (!input) return;
+  const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  input.value = data.SAVED_USERNAME || "";
+};
+
+const validateSignUpForm = () => {
+  const inputs = document.getElementById("signup-form");
+
+  const username = inputs.querySelector("input[type='text']").value;
+  const email = inputs.querySelector("input[type='email']").value;
+  const password = inputs.querySelector("input[type='password']").value;
+  if (!username || !password || !email) {
+    alert("Vui lòng điền đầy đủ thông tin");
+    return false;
+  }
+  const accounts = JSON.parse(window.localStorage.getItem(STORAGE_KEY)).ACCOUNTS;
+  for (let account of accounts) {
+    if (account.username == username) {
+      alert("Username đã tồn tại!")
+      return false;
+    } else if (account.email == email) {
+      alert("Email đã tồn tại");
+      return false;
+    }
+  }
+  const storage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  storage.ACCOUNTS.push({ username: username, password: password })
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
+
+  alert("Đăng kí thành công, chuyển sang đăng nhập.");
+  window.location = "../login.html";
+}
+const loginForm = () => {
+  const form = document.getElementById("login");
+  const username = form.querySelector("input[type='text']").value;
+  const password = form.querySelector("input[type='password']").value;
+  const remember = form.querySelector("input[type='checkbox']").checked;
+  console.log({ username, password, remember });
+
+  const storage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  const accounts = storage.ACCOUNTS;
+  if (!username || !password) {
+    alert("Vui lòng điền đầy đủ thông tin");
+    return false;
+  }
+  let ch = true;
+  for (let account of accounts) {
+    if (account.username == username && account.password == password) {
+      storage.SAVED_USERNAME = remember ? username : null;
+      storage.IS_AUTHENTICATED = true;
+      storage.CURRENT_USER = account;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
+      ch = false;
+      alert("Login thành công, chuyển sang trang chủ.");
+      window.location = "../index.html";
+    }
+  }
+  if (ch) alert("Tài khoản hoặc mật khẩu không hợp lệ.");
+}
+const checkStateAuthentication = () => {
+  // neu da login thi chan url login va signup
+  const storage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  if (!storage.IS_AUTHENTICATED || !storage.CURRENT_USER) {
+    storage.IS_AUTHENTICATED = false;
+    storage.CURRENT_USER = null;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
+  }
+  if (storage.IS_AUTHENTICATED && (window.location.href.includes("login") || window.location.href.includes("sign_up"))) {
+    alert("Không thể truy cập khi đã đăng nhập");
+    window.location = "../index.html";
+  }
+  // chinh header, neu login thi bo 2 nut login/signup di, thay vao do la nut logout va cau xin chao
+  const authGroupBtnMd = document.querySelector(".auth-group-btn");
+  const authGroupBtn = document.querySelectorAll(".header-nav-sub")[1];
+  console.log({ authGroupBtnMd, authGroupBtn });
+  authGroupBtn.innerHTML = authGroupBtnMd.innerHTML = `
+    <span style="color: var(--red-color); display: block; padding: 10px;">Xin chào, <i><b>${storage.CURRENT_USER.username}</b></i></span>
+    <button class="rounded-red-btn" onclick="logoutAccount()" style="cursor: pointer; margin: 0px 10px;">Logout</button>
+  `;
+}
+const logoutAccount = () => {
+  const storage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  storage.IS_AUTHENTICATED = false;
+  storage.CURRENT_USER = null;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
+  alert("Đăng xuất thành công, chuyển sang trang chủ.");
+  window.location = "../index.html";
 }

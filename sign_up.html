@@ -15,7 +15,7 @@
         <div class="loading-circle" id="loading-circle-1"></div>
         <div class="loading-circle" id="loading-circle-2"></div>
     </div>
-    
+
     <div class="wrapper">
         <div class="container">
             <div class="main-wrapper">
@@ -27,7 +27,7 @@
                                     logo
                                 </a>
                             </li>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a class="active-link" href="index.html">Home</a></li>
                             <li><a href="pages/movie-list.html">Movie list</a></li>
                             <li><a href="pages/blog-list.html">blog list</a></li>
                             <li><a href="pages/blog-grid.html">blog grid</a></li>
@@ -50,54 +50,58 @@
                             </div>
                         </div>
                         <ul class="container-collapse">
-                            <li class="item-collapse">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li class="item-collapse">
-                                <a href="pages/movie-list.html">Movie list</a>
-                            </li>
-                            <li class="item-collapse">
-                                <a href="pages/blog-list.html">blog list</a>
-                            </li>
-                            <li class="item-collapse">
-                                <a href="pages/blog-grid.html">blog grid</a>
-                            </li>
-                            <li class="item-collapse">
-                                <a href="pages/user-favorite-grid.html">user favorite grid</a>
-                            </li>
-                            <li class="item-collapse">
-                                <a href="login.html">login</a>
-                            </li>
-                            <li class="item-collapse">
-                                <a class="rounded-red-btn" href="sign_up.html">sign up</a>
-                            </li>
+                            <div>
+                                <li class="item-collapse">
+                                    <a class="active-link" href="index.html">Home</a>
+                                </li>
+                                <li class="item-collapse">
+                                    <a href="pages/movie-list.html">Movie list</a>
+                                </li>
+                                <li class="item-collapse">
+                                    <a href="pages/blog-list.html">blog list</a>
+                                </li>
+                                <li class="item-collapse">
+                                    <a href="pages/blog-grid.html">blog grid</a>
+                                </li>
+                                <li class="item-collapse">
+                                    <a href="pages/user-favorite-grid.html">user favorite grid</a>
+                                </li>
+                            </div>
+                            <div class="auth-group-btn">
+                                <li class="item-collapse">
+                                    <a href="login.html">login</a>
+                                </li>
+                                <li class="item-collapse">
+                                    <a class="rounded-red-btn" href="sign_up.html">sign up</a>
+                                </li>
+                            </div>
                             <li class="item-collapse">
                                 <a onclick="activeNavMd()" class="rounded-yellow-btn" href="#">Close</a>
                             </li>
                         </ul>
                         <div class="overlay" onclick="activeNavMd()"></div>
-        
+
                     </div>
                 </header>
-        
-               
+
+
             </div>
             <!--khu vực Sign-up -->
-          <div class="signup-form" id="signup-form">
-            <div class="signup-box animated-element">
-              <h2>Đăng ký</h2>
-              <form>
-                <input type="text"  placeholder="Tên đăng nhập" required>
-                <input type="email"  placeholder="Email" required>
-                <input type="password" class="password" placeholder="Mật khẩu" required>
-                    <!--click chuột vào để hàm change() chạy-->
-                    <span class="on_off animated-element" onclick="change()">
-                        🔐
-                    </span>
-                <button type="submit">Tạo tài khoản</button>
-              </form>
+            <div class="signup-form" id="signup-form">
+                <div class="signup-box animated-element">
+                    <h2>Đăng ký</h2>
+                    <form onsubmit="event.preventDefault(); validateSignUpForm();">
+                        <input type="text" placeholder="Tên đăng nhập">
+                        <input type="email" placeholder="Email">
+                        <input type="password" class="password" placeholder="Mật khẩu">
+                        <!--click chuột vào để hàm change() chạy-->
+                        <span class="on_off animated-element" onclick="change()">
+                            🔐
+                        </span>
+                        <button type="submit">Tạo tài khoản</button>
+                    </form>
+                </div>
             </div>
-          </div>
         </div><!--Viết bên trong khu vực main/ thân trang web-->
         <footer class="container-flex">
             <p>Nhóm sinh viên thực hiện (D18CNPM4): Nguyễn Văn Luận, Nguyễn Đình Duy, Nguyễn Trọng An</p>

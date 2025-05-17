@@ -37,6 +37,7 @@ a {
   --yellow-color: #FFE836;
 }
 
+
 html,
 body {
   height: 100%;
@@ -151,7 +152,7 @@ footer {
 }
 
 .tiny {
-  padding: 20px 0px !important;
+  padding: 20px !important;
 }
 
 .nav-only-md {
@@ -162,7 +163,7 @@ footer {
 
   header * {
     font-size: 14px;
-    font-weight: normal;
+    /* font-weight: normal; */
   }
 
   .container {

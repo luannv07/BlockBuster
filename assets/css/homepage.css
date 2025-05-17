@@ -13,11 +13,12 @@
         font-weight: bold;
         margin-left: 0px;
     }
+
     /*background hình lửa trại*/
     .main-wrapper {
         /*trộn 2 loại background với nhau(trộn ảnh và màu)*/
         background: linear-gradient(rgba(5, 22, 48, 0.7), rgba(5, 22, 48, 0.7)),
-                    url('../images/banner/banner.jpg');
+            url('../images/banner/banner.jpg');
         background-image: url('../images/banner/banner.jpg');
         background-position: bottom;
         background-size: cover;
@@ -37,6 +38,7 @@
         opacity: 1;
         transform: translateY(0);
     }
+
     /*thêm hiệu ứng cho thanh login và sign-up*/
     .rounded-red-btn {
         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
@@ -47,6 +49,7 @@
         box-shadow: 0px 0px 15px rgba(20, 17, 17, 0.8);
         transition: box-shadow 0.25s ease-in-out;
     }
+
     .container {
         background-color: transparent;
     }
@@ -146,6 +149,7 @@
     .active {
         background: orangered !important;
     }
+
     /*play: phụ trách nút play, play2: phụ trách khu vực đánh giá*/
     .play {
         opacity: 0;
@@ -502,7 +506,9 @@
         font-size: 24px;
     }
 
-    .pic1:hover,.pic2:hover,.pic3:hover {
+    .pic1:hover,
+    .pic2:hover,
+    .pic3:hover {
         cursor: pointer;
     }
 
@@ -622,13 +628,16 @@
     }
 
     .thanh_phu1:hover
-    /*.thanh_phu3:hover*/ {
+
+    /*.thanh_phu3:hover*/
+        {
         cursor: pointer;
         text-decoration: underline;
         color: #78c0ff;
         transition: all 0.3s ease-in-out;
     }
-    .thanh_phu3:hover{
+
+    .thanh_phu3:hover {
         cursor: pointer;
         color: #78c0ff;
         transition: all 0.3s ease-in-out;
