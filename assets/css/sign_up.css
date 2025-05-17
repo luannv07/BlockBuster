@@ -28,42 +28,40 @@ div {
     box-shadow: 0 0 0 4px red;
     transition: box-shadow 0.3s ease-in-out;
 }
-
-/* làm mờ toàn bộ trang web bằng cách đè z-index lên trên*/
-.login-form,
-.signup-form {
-    position: fixed;
-    top: 0;
-    left: 0;
-    /*khu vực làm mờ chiếm 100% trang web*/
-    width: 100%;
-    height: 100%;
-}
-
 /* tạo 2 khung login/ sign-up được đặt ở giữa màn hình */
-.login-box,
-.signup-box {
+ .login-form,
+ .signup-form {
+ position: fixed;
+ top: 0; left: 0;
+ /*khu vực làm mờ chiếm 100% trang web*/
+ width: 100%;
+ height: 100%;
+ }
+ /* tạo 2 khung login/ sign-up được đặt ở giữa màn hình */
+ .login-box,
+ .signup-box {
     background-color: #1e1e1e;
     padding: 2rem;
-    border-radius: 8px;
-    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25),
+                0 12px 32px rgba(255, 255, 255, 0.2),
+                inset 0 3px 6px rgba(255, 255, 255, 0.1);
+    width: 320px;
     height: fit-content;
     color: white;
     position: relative;
     top: 30%;
-    left: 41%;
+    left: 40%;
 }
-
-/* căn giữa tiêu đề */
-.login-box h2,
-.signup-box h2 {
+ /* căn giữa tiêu đề */
+ .login-box h2,
+ .signup-box h2 {
     margin-bottom: 1rem;
     text-align: center;
-}
-
-/*các thanh Input cách đều nhau */
-.login-box input,
-.signup-box input {
+ }
+ /*các thanh Input cách đều nhau */
+ .login-box input,
+ .signup-box input {
     width: 100%;
     padding: 10px;
     /*2 thanh cách nhau 8px(top- bottom), 0px(left-right) */
@@ -73,10 +71,10 @@ div {
     background-color: #333;
     color: white;
     border-radius: 4px;
-}
-
-/*nổi bật thanh input khi nhấp chuột vào*/
-.signup-box input:focus {
+    font-weight: 500;
+ }
+  /*nổi bật thanh input khi nhấp chuột vào*/
+  .signup-box input:focus {
     background-color: #444;
     border-color: #e50914;
     box-shadow: 0 0 8px #e50914;
@@ -85,37 +83,35 @@ div {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
-
-/* button Submit bên trong login-box/signup-box */
-.login-box button,
+ /* button Submit bên trong login-box/signup-box */
 .signup-box button {
     width: 100%;
-    padding: 10px;
-    background-color: #e50914;
+    padding: 12px;
+    background-color: red !important;
+    background: linear-gradient(to right, blue, orange);
+    background-repeat: no-repeat;
+    /*ẩn màu background linear-gradient, giữ lại màu  red (!important)*/
+    background-size: 0% 100%;
+    background-position: right; 
     color: white;
     font-size: 16px;
-    border-radius: 4px;
-    margin-top: 12px;
+    border-radius: 6px;
+    margin-top: 14px;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-size 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover button */
-.login-box button:hover,
-.signup-box button:hover {
-    background: linear-gradient(to right, blue, orange);
-    color: rgb(0, 255, 179);
-    transform: scale(1.05);
-    transition: all 0.5s ease-in-out;
-}
-
-.login-box button:focus,
+/* Hover và focus effects */
+.signup-box button:hover,
 .signup-box button:focus {
-    background: linear-gradient(to right, blue, orange);
-    color: rgb(0, 255, 179);
-    transition: all 0.5s ease-in-out;
+    background-size: 100% 100%;
+    background-position: left;
+    color: #00ffb3;
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
-
 /*khu vực ghi nhớ tên đăng nhập*/
 input[type="checkbox"] {
     margin-left: 3px;
@@ -143,4 +139,26 @@ input[type="checkbox"] {
 .move_to_sign-up:hover {
     color: rgb(118, 118, 255);
     transition: color 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+    .signup-box {
+        width: 90%;
+        left: 5%;
+        top: 20%;
+        padding: 1.5rem;
+    }
+    .signup-box h2 {
+        font-size: 1.5rem;
+    }
+    .signup-box button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .on_off{
+        width: 3%;
+        height: 4%;
+        font-size: 24px;
+        margin-top: -10.5%;
+        margin-left: 79.5%;
+    }
 }
