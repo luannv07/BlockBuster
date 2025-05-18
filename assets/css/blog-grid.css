@@ -1,36 +1,43 @@
 * {
     max-width: 100%;
 }
+
 div {
     color: #FFFFFF;
     font-family: 'Segoe UI';
     transition: all 0.3s ease-in-out;
 }
+
 body {
     background-color: var(--background-color);
     color: #FFFFFF;
     font-family: 'Segoe UI';
     transition: all 0.3s ease-in-out;
 }
+
 /*animation cho toàn trang*/
 .animated-element {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 1s ease-out;
 }
+
 .appear {
     opacity: 1;
     transform: translateY(0);
 }
+
 /*nổi bật cho thanh sign-up và login*/
 .rounded-red-btn {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
     transition: box-shadow 0.25s ease-in-out;
 }
+
 .rounded-red-btn:hover {
     box-shadow: 0px 0px 15px rgba(20, 17, 17, 0.8);
     transition: box-shadow 0.3s ease-in-out;
 }
+
 /*background hình lửa trại bên trong header*/
 .main-wrapper {
     /*trộn 2 loại background với nhau(trộn ảnh và màu)*/
@@ -43,6 +50,7 @@ body {
     width: 100%;
     height: 450px;
 }
+
 /* thẻ banner*/
 .banner {
     width: 255px;
@@ -56,6 +64,7 @@ body {
     margin-top: 12%;
     color: #FFFFFF;
 }
+
 /*Hiển thị trang hiện tại đang truy cập*/
 .banner_main {
     font-size: 48px;
@@ -117,6 +126,7 @@ a {
 
 /*khu vực chính 70% chia làm 3 hàng- 4 cột*/
 .hang1
+
 /*.hang2,.hang3*/
     {
     width: 90%;
@@ -128,6 +138,7 @@ a {
 
 /*xét 12 ô trong khu vực 70% theo tỉ lệ 3x4*/
 .cot1
+
 /*,.cot2,.cot3,.cot4,.cot5,.cot6,.cot7,.cot8,.cot9,.cot10,.cot11,.cot12*/
     {
     opacity: 0;
@@ -142,6 +153,7 @@ a {
 }
 
 .cot1:hover
+
 /*
 .cot2:hover,
 .cot3:hover,
@@ -153,20 +165,24 @@ a {
 .cot9:hover,
 .cot10:hover,
 .cot11:hover,
-.cot12:hover*/ {
+.cot12:hover*/
+    {
     border: 2px solid yellow;
     cursor: pointer;
     transition: border 0.3s;
 }
 
 .cot1_main
+
 /*
 .cot2_main,
-.cot3_main*/ {
+.cot3_main*/
+    {
     background-image: url('../images/blog-it1.jpg');
 }
 
 .cot1_side
+
 /*
 .cot2_side,
 .cot3_side,
@@ -178,10 +194,12 @@ a {
 .cot9_side,
 .cot10_side,
 .cot11_side,
-.cot12_side*/ {
+.cot12_side*/
+    {
     height: 50%;
     max-width: 100%;
 }
+
 /*animation cho các ô*/
 .cot1 {
     opacity: 0;
@@ -193,13 +211,15 @@ a {
     opacity: 1;
     transform: translateY(0);
 }
+
 /*căn chỉnh ảnh*/
 .cot1_main {
     background-size: cover;
     background-repeat: no-repeat;
     height: 200px;
 }
-.cot1_main:hover{
+
+.cot1_main:hover {
     transform: scale(1.05);
     transition: all 0.5s ease-in-out;
 }
@@ -250,6 +270,7 @@ a {
     color: #408ed2;
 
 }
+
 .cot1_content1:hover {
     color: #FFE836;
 }
@@ -487,15 +508,7 @@ hr {
     border-radius: 5px;
 }
 
-footer {
-    /* margin-top: 54.8%; */
-    z-index: 1000;
-    position: relative;
-}
-.container-flex{
-    padding-top: 10px;
-    margin-top: 200%;
-}
+
 .container {
     margin: auto;
     padding: 20px;
@@ -536,14 +549,16 @@ footer {
     .thanh4,
     .thanh5,
     .thanh6 {
-        width: 80%; 
+        width: 80%;
         margin: auto;
     }
+
     .sang_trang {
         margin: auto;
         margin-top: -70%;
         padding: auto;
     }
+
     .row_search,
     .tag_of_categories,
     .tag_of_tag {
@@ -558,16 +573,12 @@ footer {
         justify-content: center;
         padding-bottom: 10%;
     }
+
     #search-box {
         margin: auto;
         margin-left: 39%;
     }
 
-    footer {
-        /*margin-top: 300%;*/
-        padding: 100px;
-        display: none !important;
-    }
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1300px) {
@@ -608,10 +619,12 @@ footer {
         width: 80%;
         margin: auto;
     }
+
     .sang_trang {
         margin: auto;
         margin-top: -70%;
     }
+
     .row_search,
     .tag_of_categories,
     .tag_of_tag {
@@ -623,13 +636,10 @@ footer {
         justify-content: center;
         padding-bottom: 10%;
     }
+
     #search-box {
         margin: auto;
         margin-left: 49%;
-    }
-
-    footer {
-        /* margin-top: 120%; */
     }
 }
 
@@ -689,23 +699,22 @@ footer {
     .tag_of_tag {
         margin: auto;
     }
+
     .sang_trang {
         display: none;
     }
+
     .tag_of_tag {
         display: flex;
         justify-content: center;
         padding-bottom: 15%;
     }
+
     #search-box {
         margin: auto;
         margin-left: 39%;
     }
 
-    footer {
-        opacity: 0.8;
-        /* margin-top: 400%; */
-    }
 }
 
 @media screen and (max-width:730px) {
