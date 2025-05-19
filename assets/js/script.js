@@ -1231,7 +1231,7 @@ const data = [
     "img": "images/movies-thumbnail/16.jpg"
   }
 ]
-const minActiveHeader = 400;
+const MIN_ACTIVE_HEADER = 400;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1239,10 +1239,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("scroll", () => setTinyHeader(window.scrollY, window.innerWidth, header));
 
-  window.addEventListener("resize", () => {
-    const currentWidth = window.innerWidth;
-    console.log("Window Width:", currentWidth);
-  });
+  // window.addEventListener("resize", () => {
+  //   const currentWidth = window.innerWidth;
+  //   console.log("Window Width:", currentWidth);
+  // });
 
   // authentication
   initAuthStorage();
@@ -1250,7 +1250,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkStateAuthentication();
 });
 const setTinyHeader = (yAxis, wScreen, element) => {
-  if (yAxis > minActiveHeader && wScreen >= 992)
+  if (yAxis > MIN_ACTIVE_HEADER && wScreen >= 992)
     element.classList.add("tiny");
   else
     element.classList.remove("tiny");

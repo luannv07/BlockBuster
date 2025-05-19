@@ -1,7 +1,7 @@
 
 const RELATED_COUNT_ELEMENT = 20;
 const randomElementOfArray = arr => arr[Math.floor(Math.random() * arr.length)];
-const avatarUsersLink = [1, 2, 3, 4];
+// const avatarUsersLink = [1, 2, 3, 4];
 const comments = [
   {
     rvTitle: "A Marvel masterpiece in every sense",
